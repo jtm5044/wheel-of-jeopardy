@@ -1,0 +1,211 @@
+{
+	"firstRoundCategories": {
+		"AROUND NEW YORK STATE": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Though it's 150 miles from the Atlantic, this capital of New York has an active port",
+				"answerText": "What is Albany?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "This northernmost New York City borough boasts the Rose Hill campus of Fordham University",
+				"answerText": "What is the Bronx?"
+			}
+		],
+		"STUDENT & TEACHER": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "His teacher Ghirlandaio frescoed the Sistine Chapel's north wall; he frescoed the ceiling",
+				"answerText": "Who is Michelangelo?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Hermann Minkowski taught him math in the 1890s & couldn't believe it when he became a great scientist",
+				"answerText": "Who is Albert Einstein?"
+			}
+		],
+		"A STRONG CONSTITUTION": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "'We the People of the United States' declare the principles of the Constitution in the preface called this",
+				"answerText": "What is the preamble?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "As the Vietnam War raged & men were drafted who couldn't vote, the 26th amendment made the voting age this",
+				"answerText": "What is 18?"
+			}
+		],
+		"BIBLE BELTS": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In the Sermon on the Mount, Jesus says that if someone 'smiteth' you here, 'offer also the other'",
+				"answerText": "Where is the cheek?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In Numbers 20, after the Israelites complained, Moses smote this object twice & water came out",
+				"answerText": "What is the rock?"
+			}
+		],
+		"YOUR PLANET MUST GO!": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Superman has problems with remnants of his destroyed planet, like the green & red varieties of this substance",
+				"answerText": "What is kryptonite?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "A planet goes boom from the Genesis device as the crew searches for this guy in the third 'Star Trek' movie",
+				"answerText": "Who is Spock?"
+			}
+		],
+		"WHAT ARE YOU AFRAID OF?": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Bibliophobia, a fear of these, might hurt you if you want to continue your studies",
+				"answerText": "What is books?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "If you suffer from heliophobia, a fear of this, you might be a vampire!",
+				"answerText": "What is the Sun?"
+			}
+		]
+
+	},
+	"secondRoundCategories": {
+		"SOUTH AMERICAN COUNTRIES": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "On an alphabetical list of world nations, it comes directly before Uzbekistan",
+				"answerText": "What is Uruguay?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "This South American country was named for a man born in 1451 in Genoa",
+				"answerText": "What is Columbia?"
+			}
+		],
+		"YOUR PARENTS' MUSIC": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "'Royal' name of the singer & guitarist who was first popular in the 1980s & performed at the 2007 Super Bowl",
+				"answerText": "Who is Prince?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The song '(I Can't Get No) Satisfaction' by this band was a No. 1 hit way back in 1965",
+				"answerText": "Who is The Rolling Stones?"
+			}
+		],
+		"ALL ABOUT ANIMALS": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "/Users/jeremy/git_projects/wheel-of-jeopardy/src/conf/r2c3q1.jpg",
+				"questionText": "The fish seen here is named for its resemblance to this rodent",
+				"answerText": "What is a porcupine?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "A type of beetle & a species of seal are named for this large land herbivore",
+				"answerText": "What is an elephant?"
+			}
+		],
+		"WHAT A 19th CENTURY YEAR!": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Colorado, 'The Centennial State' was admitted to the Union in this year",
+				"answerText": "What is 1876?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Gold seekers who rushed to California were nicknamed for this year",
+				"answerText": "What is 1849?"
+			}
+		],
+		"WORLD OF WARCRAFT": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Fokker triplanes were used by this country in dogfights in WWI",
+				"answerText": "What is Germany?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Stinger missiles are used against low-flying aircraft & are known as this-to-air",
+				"answerText": "What is ground?"
+			}
+		],
+		"COMING AT YOU IN 3-D": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "A famous presidential saying: 'A house' this 'against itself cannot stand'",
+				"answerText": "What is divided?"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "/Users/jeremy/git_projects/wheel-of-jeopardy/src/conf/r2c6q2.jpg",
+				"questionText": "The person seen here is riding in this style",
+				"answerText": "What is sidesaddle?"
+			}
+		]
+	}
+}
