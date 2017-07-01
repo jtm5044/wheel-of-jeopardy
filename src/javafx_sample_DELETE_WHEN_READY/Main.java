@@ -3,7 +3,6 @@ package javafx_sample_DELETE_WHEN_READY;
 import com.google.gson.Gson;
 import edu.jhu.woj.model.Question;
 import edu.jhu.woj.model.QuestionBoard;
-import edu.jhu.woj.model.Wheel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,13 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-
-import static javax.script.ScriptEngine.FILENAME;
 
 public class Main extends Application {
 
@@ -59,7 +53,7 @@ public class Main extends Application {
 //
 //        System.out.println(w.toString());
 
-        String FILENAME = "/Users/jeremy/git_projects/wheel-of-jeopardy/src/conf/default.qb";
+        String FILENAME = System.getProperty("user.dir") + File.separator + "conf" + File.separator + "default.qb";
         BufferedReader br = null;
         FileReader fr = null;
 
