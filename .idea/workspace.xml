@@ -67,9 +67,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -536,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499995055342</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adhering as much as I can to the MVC design pattern (new to me) I was able to work on the following:&#10;- Model &#10;o Player model&#10;- Views: &#10;o Player names view&#10;o Spin wheel view&#10;o Ask question view&#10;o Start new round view (screenshot not shown)&#10;o Game is over view (screenshot not shown)&#10;o Give answer view&#10;- Controllers: &#10;o Player names controller&#10;o Spin wheel controller&#10;o Ask question controller&#10;o Give answer controller">
+      <created>1499995245897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1499995245897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1001,9 +1010,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
