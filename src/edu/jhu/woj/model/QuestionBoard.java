@@ -1,44 +1,39 @@
-/*
 package edu.jhu.woj.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 /**
  * Created by jeremy on 6/22/17.
  */
-//public class QuestionBoard {
+public class QuestionBoard {
 
     /**
      * A hash map of first round categories with their corresponding questions.
      * The String key is the category text e.g. "Numbers"
      * The ArrayList<Question> holds questions in increasing point value order
      */
-    //private LinkedHashMap<String, ArrayList<Question>> firstRoundCategories = new LinkedHashMap<String, ArrayList<Question>>();
+    private LinkedHashMap<String, ArrayList<Question>> firstRoundCategories = new LinkedHashMap<String, ArrayList<Question>>();
 
     /**
      * A hash map of second round categories with their corresponding questions.
      * The String key is the category text e.g. "Numbers"
      * The ArrayList<Question> holds questions in increasing point value order
      */
-    //private LinkedHashMap<String, ArrayList<Question>> secondRoundCategories = new LinkedHashMap<String, ArrayList<Question>>();
+    private LinkedHashMap<String, ArrayList<Question>> secondRoundCategories = new LinkedHashMap<String, ArrayList<Question>>();
 
     /**
      * Constructor to initialize the question board
      * @param firstRoundCategories A hash map of first round categories with their corresponding questions.
      * @param secondRoundCategories A hash map of second round categories with their corresponding questions
      */
-    /*
     public QuestionBoard(LinkedHashMap<String, ArrayList<Question>> firstRoundCategories,
                          LinkedHashMap<String, ArrayList<Question>> secondRoundCategories)
     {
         this.firstRoundCategories = firstRoundCategories;
         this.secondRoundCategories = secondRoundCategories;
     }
-    */
 
-    /*
     public String[] getCategories(int round)
     {
         if(round != 1 && round != 2) { throw new IllegalArgumentException("Round must be either 1 or 2."); }
@@ -57,9 +52,33 @@ import java.util.LinkedHashMap;
             throw new RuntimeException("Unexpected error. Could not get categories.");
         }
     }
-    */
 
-    /*
+    public Question getNextUnansweredQuestionForCategory(int round, int categoryIndex)
+    {
+        Question[] qs = getQuestionsForCategory(round, categoryIndex);
+        for(Question q : qs)
+        {
+            if(q.getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED)
+            {
+                return q;
+            }
+        }
+        return null;
+    }
+
+    public Question getNextUnansweredQuestionForCategory(int round, String category)
+    {
+        Question[] qs = getQuestionsForCategory(round, category);
+        for(Question q : qs)
+        {
+            if(q.getState().equals(Question.QuestionState.QUESTION_STATE_UNANSWERED))
+            {
+                return q;
+            }
+        }
+        return null;
+    }
+
     public Question[] getQuestionsForCategory(int round, int categoryIndex)
     {
         if(round != 1 && round != 2) { throw new IllegalArgumentException("Round must be either 1 or 2."); }
@@ -86,9 +105,7 @@ import java.util.LinkedHashMap;
         }
         throw new IllegalArgumentException("No category for index " + categoryIndex);
     }
-    */
 
-    /*
     public Question[] getQuestionsForCategory(int round, String category)
     {
         if(round != 1 && round != 2) { throw new IllegalArgumentException("Round must be either 1 or 2."); }
@@ -113,5 +130,4 @@ import java.util.LinkedHashMap;
             throw new RuntimeException("Unexpected error. Could not get questions.");
         }
     }
-    */
-//}
+}
