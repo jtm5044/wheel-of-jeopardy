@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java" afterPath="$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java" afterPath="$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -68,7 +67,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="-266">
               <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,7 +76,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2775">
+              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#982#990#0" expanded="true" />
+                <element signature="e#3840#3850#0" expanded="true" />
+                <element signature="e#3961#3971#0" expanded="true" />
+                <element signature="e#4082#4092#0" expanded="true" />
+                <element signature="e#4203#4213#0" expanded="true" />
+                <element signature="e#4365#4394#0" expanded="true" />
+                <element signature="e#4611#4640#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1605">
@@ -141,7 +159,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/model/Wheel.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/model/Question.java" />
-        <option value="$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/view/MainGameScreen.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/view/BasicView.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/model/Player.java" />
@@ -162,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/answer/GiveAnswer.fxml" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java" />
+        <option value="$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java" />
       </list>
     </option>
   </component>
@@ -216,6 +234,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wheel-of-jeopardy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wheel-of-jeopardy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javafx_sample_DELETE_WHEN_READY" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,6 +549,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1916" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -520,7 +557,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6997886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36595744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36595744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -578,7 +615,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/src.zip!/java/lang/invoke/MethodHandleNatives.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/src.zip!/java/lang/invoke/MemberName.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/jre/lib/rt.jar!/sun/misc/URLClassPath.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/javafx-src.zip!/com/sun/javafx/runtime/SystemProperties.java" />
@@ -677,7 +713,7 @@
         <state relative-caret-position="289">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -748,16 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
@@ -766,6 +792,33 @@
             <element signature="imports" expanded="true" />
             <element signature="e#488#517#0" expanded="true" />
             <element signature="e#852#881#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_sample_DELETE_WHEN_READY/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#982#990#0" expanded="true" />
+            <element signature="e#3840#3850#0" expanded="true" />
+            <element signature="e#3961#3971#0" expanded="true" />
+            <element signature="e#4082#4092#0" expanded="true" />
+            <element signature="e#4203#4213#0" expanded="true" />
+            <element signature="e#4365#4394#0" expanded="true" />
+            <element signature="e#4611#4640#0" expanded="true" />
           </folding>
         </state>
       </provider>

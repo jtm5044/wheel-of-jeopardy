@@ -1,4 +1,4 @@
-/*
+
 package javafx_sample_DELETE_WHEN_READY;
 
 import com.google.gson.Gson;
@@ -170,10 +170,16 @@ public class Main extends Application {
         Question[] q1 = qb3.getQuestionsForCategory(1, 4);
         for(int i = 0; i < q1.length; i++)
         {
-            System.out.println(q1[i].getQuestionText() + ", " + q1[i].getAnswerText());
+            System.out.println(q1[i].getQuestionText() + ", " + q1[i].getAnswerText() + ", " + q1[i].getState());
         }
 
-            launch(args);
+        Question q = qb3.getNextUnansweredQuestionForCategory(1, 4);
+        System.out.println("Next unanswered: " + q.getQuestionText());
+        q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
+
+        Question q2 = qb3.getNextUnansweredQuestionForCategory(1, 4);
+        System.out.println("Next unanswered: " + q2.getQuestionText());
+
+        launch(args);
     }
 }
-*/
