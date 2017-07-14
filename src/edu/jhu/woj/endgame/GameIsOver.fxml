@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefHeight="75.0" prefWidth="600.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" percentWidth="25.0" prefWidth="0.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="186.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="256.0" minWidth="0.0" percentWidth="25.0" prefWidth="139.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="188.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Player A:" GridPane.halignment="RIGHT">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <Label text="Player B:" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" />
+                        <Label text="Free Turn Tokens:" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <Label text="Free Turn Tokens:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </GridPane>
+                <Separator prefWidth="200.0" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="BASELINE_CENTER" minHeight="-Infinity" prefHeight="275.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Game Is Over">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Game Winner: " />
+                        <TextField prefWidth="100.0" text="Player &quot;X&quot;" />
+                    </children>
+                </HBox>
+                <Label text="Play Again?">
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                    <children>
+                        <Button mnemonicParsing="false" prefWidth="50.0" text="Yes" />
+                        <Button mnemonicParsing="false" prefWidth="50.0" text="Quit" />
+                    </children>
+                </HBox>
+                <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../../../JHU/605.401-FoundationsOfSofwareEngineering/Project/wof_32_profile_icon_73x73.jpg" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button disable="true" mnemonicParsing="false" prefWidth="73.0" text="Spin" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Spins Remaining in Round:">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <TextField alignment="CENTER" prefWidth="40.0" text="37" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>
