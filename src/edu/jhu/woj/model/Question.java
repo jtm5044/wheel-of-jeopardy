@@ -17,7 +17,7 @@ public class Question {
     /**
      * The state of the question
      */
-    private QuestionState questionState = QuestionState.QUESTION_STATE_UNANSWERED;
+    private QuestionState state = QuestionState.QUESTION_STATE_UNANSWERED;
 
     /**
      * The dollar amount of the question
@@ -64,7 +64,7 @@ public class Question {
                     String questionText,
                     String answerText)
     {
-        this.questionState = questionState;
+        this.state = questionState;
         this.dollarAmount = dollarAmount;
         this.dailyDouble = dailyDouble;
         this.pathToMedia = pathToMedia;
@@ -77,16 +77,16 @@ public class Question {
      * Returns the state of this question
      * @return {@link QuestionState}
      */
-    public QuestionState getQuestionState() {
-        return questionState;
+    public QuestionState getState() {
+        return state;
     }
 
     /**
      * Sets the state of this question
-     * @param questionState {@link QuestionState}
+     * @param state {@link QuestionState}
      */
-    public void setQuestionState(QuestionState questionState) {
-        this.questionState = questionState;
+    public void setState(QuestionState state) {
+        this.state = state;
     }
 
     /**
