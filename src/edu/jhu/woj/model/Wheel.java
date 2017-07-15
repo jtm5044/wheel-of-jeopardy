@@ -68,7 +68,7 @@ public class Wheel {
      */
     public void setCurrentlySelectedWheelIndex(int index)
     {
-        if(index > 0 && index < wheelSectors.size()) {
+        if(index >= 0 && index < wheelSectors.size()) {
             currentlySelectedWheelIndex = index;
             currentlySelectedWheelSector = wheelSectors.get(index);
         }else

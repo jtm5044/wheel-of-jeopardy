@@ -74,13 +74,13 @@
             <children>
                 <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url = "@../images/wof_32_profile_icon_73x73.jpg"/>
+                        <Image url="@../images/wof_32_profile_icon_73x73.jpg"/>
                     </image>
                     <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                     </VBox.margin>
                 </ImageView>
-                <Button mnemonicParsing="false" onAction="#goAskQuestion" prefWidth="73.0" text="Spin" />
+                <Button mnemonicParsing="false" onAction="#spinWheel" prefWidth="73.0" text="Spin" />
             </children>
         </VBox>
     </bottom>
@@ -106,74 +106,74 @@
                 <Insets />
             </BorderPane.margin>
             <children>
-                <Label text="Category 1">
+                <Label fx:id="category1" text="Category 1">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Label text="Category 2" GridPane.columnIndex="1">
+                <Label fx:id="category2" text="Category 2" GridPane.columnIndex="1">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Label text="Category 3" GridPane.columnIndex="2">
+                <Label fx:id="category3" text="Category 3" GridPane.columnIndex="2">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Label text="Category 4" GridPane.columnIndex="3">
+                <Label fx:id="category4" text="Category 4" GridPane.columnIndex="3">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Label text="Category 5" GridPane.columnIndex="4">
+                <Label fx:id="category5" text="Category 5" GridPane.columnIndex="4">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Label text="Category 6" GridPane.columnIndex="5">
+                <Label fx:id="category6" text="Category 6" GridPane.columnIndex="5">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.rowIndex="1">
+                <Button fx:id="c1q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets />
                     </GridPane.margin>
                 </Button>
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.rowIndex="2">
+                <Button fx:id="c1q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets bottom="5.0" top="5.0" />
                     </GridPane.margin>
                 </Button>
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.rowIndex="4" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.rowIndex="5" />
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                <Button maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="200" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="400" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="600" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="1000" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                <Button mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="800" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <Button fx:id="c1q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.rowIndex="3" />
+                <Button fx:id="c1q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.rowIndex="4" />
+                <Button fx:id="c1q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.rowIndex="5" />
+                <Button fx:id="c2q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="c3q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="c4q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button fx:id="c5q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Button fx:id="c6q1" disable="true" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Button fx:id="c2q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="c3q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="c4q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button fx:id="c5q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Button fx:id="c6q2" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Button fx:id="c2q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="c3q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="c4q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button fx:id="c5q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Button fx:id="c6q3" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Button fx:id="c2q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button fx:id="c3q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Button fx:id="c4q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Button fx:id="c5q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Button fx:id="c6q5" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Button fx:id="c2q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button fx:id="c3q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="c4q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button fx:id="c5q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Button fx:id="c6q4" disable="true" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-radius: 10;" text="TBD" GridPane.columnIndex="5" GridPane.rowIndex="4" />
             </children>
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

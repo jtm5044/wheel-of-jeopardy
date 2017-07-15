@@ -3,9 +3,15 @@ package edu.jhu.woj;
 /**
  * Created by Graciela on 7/12/2017.
  */
+import java.io.*;
 import java.io.IOException;
+import java.util.*;
 
-import edu.jhu.woj.model.PlayerModel;
+import com.google.gson.Gson;
+
+import edu.jhu.woj.model.Player;
+import edu.jhu.woj.model.QuestionBoard;
+import edu.jhu.woj.model.Wheel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,10 +21,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
     public final static String DEFAULT_USR1 = "Player A";
     public final static String DEFAULT_USR2 = "Player B";
-    public static PlayerModel playerA;
-    public static PlayerModel playerB;
+    public static Player playerA;
+    public static Player playerB;
+    public static QuestionBoard qb;
+    public static Wheel wheel;
     private Stage primaryStage;
     private static BorderPane mainLayout;
+    private static BufferedReader inFile;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -66,10 +75,92 @@ public class Main extends Application {
         mainLayout.setCenter(jeopardyAnswer);
     }
 
-    public static void main(String[] args) {
-        playerA = new PlayerModel(DEFAULT_USR1);
-        playerB = new PlayerModel(DEFAULT_USR2);
+    /**
+     * Reads the next line from the input file.
+     * @param inFile A buffered stream from a file that contains a postfix
+     *              expression per line.
+     * @return The next postfix expression from the input file.
+     */
+    private static String readFromFile(BufferedReader inFile)
+    {
+        String line=""; // Initialize line variable
 
+        try
+        {
+            line = inFile.readLine(); // Read line from input file
+        }
+        catch (IOException e)
+        {
+            System.out.println(e.toString());
+            System.exit(2);
+        }
+        return line; // Return line from input file
+    }
+
+    public static void main(String[] args) {
+
+        if (args.length != 1)
+        {
+            System.out.println("Usage: java Main [1]\n"
+                    + "\t- Filename 1: Jeopardy Questions JSON Filename\n");
+            System.exit(1);
+        }
+
+        try {
+            inFile = new BufferedReader(new FileReader(args[0]));
+        }
+        catch (IOException e) {
+            System.err.println(e.toString());
+            return;
+        }
+
+        String fileContents = "";
+        String line = readFromFile(inFile);
+        while (line != null) {
+            fileContents = fileContents +line;
+            line = readFromFile(inFile);
+        }
+
+        try {
+            inFile.close();
+        }
+        catch (IOException e) {
+            System.err.println(e.toString());
+        }
+
+        Gson gson = new Gson();
+        qb = gson.fromJson(fileContents, QuestionBoard.class);
+
+        /*
+        System.out.println("******* ROUND 1 DATA *****");
+        String[] cats1 = qb.getCategories(1);
+        for (int i=0; i<cats1.length; i++) {
+            System.out.println(">>>> " + cats1[i]);
+            Question[] questions = qb.getQuestionsForCategory(1, i);
+            for (int j=0; j<questions.length; j++) {
+                System.out.println((j+1) + ". " + questions[j].getQuestionText());
+                System.out.println(questions[j].getAnswerText());
+                System.out.println();
+            }
+        }
+
+        System.out.println("******* ROUND 2 DATA *****");
+        String[] cats2 = qb.getCategories(2);
+        for (int i=0; i<cats2.length; i++) {
+            System.out.println(">>>> " + cats2[i]);
+            Question[] questions = qb.getQuestionsForCategory(2, i);
+            for (int j=0; j<questions.length; j++) {
+                System.out.println((j+1) + ". " + questions[j].getQuestionText());
+                System.out.println(questions[j].getAnswerText());
+                System.out.println();
+            }
+        }
+        */
+
+        List<String> jeopardyCategories = Arrays.asList(qb.getCategories(1));
+        wheel = new Wheel(jeopardyCategories);
+        playerA = new Player(DEFAULT_USR1);
+        playerB = new Player(DEFAULT_USR2);
         launch(args);
     }
 }

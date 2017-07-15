@@ -1,7 +1,6 @@
 package edu.jhu.woj.model;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 /**
  * Created by jeremy on 6/22/17.
@@ -95,7 +94,7 @@ public class QuestionBoard {
 
         }else if(round == 2)
         {
-            for(String key: firstRoundCategories.keySet()){
+            for(String key: secondRoundCategories.keySet()){
                 if(index == categoryIndex)
                 {
                     return getQuestionsForCategory(round, key);

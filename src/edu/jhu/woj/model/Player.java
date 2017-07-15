@@ -1,14 +1,14 @@
 package edu.jhu.woj.model;
 
 /**
- * Created by Graciela on 7/12/2017.
+ * Created by Graciela on 7/14/2017.
  */
-public class PlayerModel {
+public class Player {
 
     private String playerName;
     private int playerScore, playerFinalScore, playerTurnFreeTokens;
 
-    public PlayerModel(String name) {
+    public Player(String name) {
         this.playerName = name;
         this.playerScore = 0;
         this.playerFinalScore = 0;
@@ -54,3 +54,4 @@ public class PlayerModel {
         this.setPlayerFinalScore(finalScore-roundScore);
     }
 }
+
