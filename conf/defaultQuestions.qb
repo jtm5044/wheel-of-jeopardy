@@ -1,0 +1,498 @@
+{
+	"firstRoundCategories": {
+		"History": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The Roman numeral \"D\" stands for what number?",
+				"answerText": "500"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What do the letters \"ZIP\" stand for in the United States postal code?",
+				"answerText": "Zone Improvement Plan"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The inventor Nikola Tesla was born on July 10th 1856 in what country?",
+				"answerText": "Serbia"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Who is credited with suggesting the word \"hello\" be used when answering the telephone?",
+				"answerText": "Thomas Edison"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What battle was fought on June 18th, 1815 in present-day Belgium?",
+				"answerText": "The Battle of Waterloo"
+			}
+		],
+        "United States": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Formerly known as Bedloe's Island, what is the current name of the island where the Statue of Liberty is located?",
+				"answerText": "Liberty Island"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What U.S. national park, located in the Northwest corner of Montana, has the nickname \"Crown of the Continent\"?",
+				"answerText": "Glacier National Park"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Who is the oldest person to be elected to the office of President of the United States?",
+				"answerText": "Donald Trump"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What was the name of the U.S. mail service, started in 1860, that used horses and riders?",
+				"answerText": "Pony Express"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What does the Statue of Liberty hold in her right hand?",
+				"answerText": "A torch"
+			}
+		],
+        "Computer": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Nintendo is a consumer electronics and video game company founded in what country?",
+				"answerText": "Japan"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In a photo editing program, what do the letters RGB stand for?",
+				"answerText": "Red, Green & Blue"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "HTML and CSS are computer languages used to create what?",
+				"answerText": "Websites"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The first person shooter video game Doom was first released in what year?",
+				"answerText": "1993"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What does the acronym \"lol\" stand for when used in phone texts and on the internet?",
+				"answerText": "Laugh out loud"
+			}
+		],
+        "Geography": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the color of the five stars found on the flag of China?",
+				"answerText": "Yellow"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "San Marino is a microstate in Europe completely surrounded by what country?",
+				"answerText": "Italy"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the Easternmost point on the North American Continent?",
+				"answerText": "Cape Spear, Newfoundland, Canada"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The St. Lawrence River forms part of the border between which two countries?",
+				"answerText": "The United States & Canada"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Sardinia, the second largest island in the Mediterranean Sea, is an autonomous region of what country?",
+				"answerText": "Italy"
+			}
+		],
+        "Language": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The term \"déjà vu\" comes from what language?",
+				"answerText": "French"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the national language of India?",
+				"answerText": "Hindi"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the main dialect of Chinese spoken in Hong Kong by the majority of the locals?",
+				"answerText": "Cantonese"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "How do you say \"I love you\" in Italian?",
+				"answerText": "Ti amo"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "How do you say \"hello\" in Swedish?",
+				"answerText": "Hej"
+			}
+		],
+        "Literature": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Which British author wrote the popular children's novel \"James and the Giant Peach\"?",
+				"answerText": "Roald Dahl"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "War and Peace, originally published in 1869, is a novel written by which Russian author?",
+				"answerText": "Leo Tolstoy"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In the children's books about a 25 foot tall red dog, what is the name of the dog?",
+				"answerText": "Clifford"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "\"Being and Time\" is an ontological treatise written by which German philosopher?",
+				"answerText": "Martin Heidegger"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Which Irish author wrote the avant-garde comic fiction, \"Finnegans Wake\"?",
+				"answerText": "James Joyce"
+			}
+		]
+	},
+	"secondRoundCategories": {
+		"Money": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Which President is on the United States 1,000 dollar bill?",
+				"answerText": "Grover Cleveland"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What building is found on the back of a United States 100 dollar bill?",
+				"answerText": "Independence Hall"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What year was the two dollar bill last printed in the United States?",
+				"answerText": "2014"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the Spanish word for money?",
+				"answerText": "Dinero"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the official currency of the country Ecuador?",
+				"answerText": "United States Dollar"
+			}
+		],
+        "Spain": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The Spanish Civil War began in what year?",
+				"answerText": "1936"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "How do you say goodbye in Spanish?",
+				"answerText": "Adiós"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the word for \"Hello\" in Spanish?",
+				"answerText": "Hola"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Who was the Spanish surrealist painter best known for his work \"The Persistence of Memory\"?",
+				"answerText": "Salvador Dalí"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Paella, a famous rice dish, originated in what country?",
+				"answerText": "Spain"
+			}
+		],
+        "Geek": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "\"Torchwood\" is an anagram and spin-off of what popular British sci-fi series?",
+				"answerText": "Doctor Who"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Star Trek: The Next Generation originally aired in what year?",
+				"answerText": "1987"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What is the unit of length that is approximately 3.26 light-years?",
+				"answerText": "Parsec"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Each of a classic Rubik's Cube six faces is covered by how many stickers?",
+				"answerText": "Nine"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Bruce Willies played a convict turned time traveler in what 1995 movie?",
+				"answerText": "12 Monkeys"
+			}
+		],
+        "Disney": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Spaceship Earth is the icon for what amusement park that features technological innovation and international culture?",
+				"answerText": "Epcot"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In the Disney movie \"Beauty and the Beast\", what is the name of Gaston's bumbling sidekick?",
+				"answerText": "LeFou"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What was the name of the kleptomaniac monkey in the Disney movie \"Aladdin\"?",
+				"answerText": "Abu"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What are the names of the three fairies in the Disney classic \"Sleeping Beauty\"?",
+				"answerText": "Flora, Fauna and Merryweather"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What was the first ever series to air on the Disney Channel?",
+				"answerText": "Good Morning, Mickey"
+			}
+		],
+        "Art": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The ancient Greek statue Aphrodite of Milos, better known as Venus de Milo, is currently on display in what museum?",
+				"answerText": "The Louvre in Paris, France"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "The Starry Night is an oil on canvas painted by which post-impressionist painter?",
+				"answerText": "Vincent van Gogh"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Who painted a late 15th-century mural known as the Last Supper?",
+				"answerText": "Leonardo da Vinci"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Which artist is credited with developing linear perspective?",
+				"answerText": "Brunelleschi"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What French sculptor created the Statue of Liberty?",
+				"answerText": "Frédéric Auguste Bartholdi"
+			}
+		],
+        "Music": [{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 200,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "Award winning Latina pop artist Shakira was born and raised in what country?",
+				"answerText": "Colombia"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 400,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "A Grammy is an award to recognize outstanding achievement in what industry?",
+				"answerText": "Music"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 600,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "\"Stairway to Heaven\" a song by English rock band Led Zeppelin was originally released on which of their albums?",
+				"answerText": "Their untitled fourth studio album commonly referred to as \"Led Zeppelin IV\""
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 800,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "What American punk rock band released their best selling album \"Dookie\" in 1994?",
+				"answerText": "Green Day"
+			},
+			{
+				"state": "QUESTION_STATE_UNANSWERED",
+				"dollarAmount": 1000,
+				"dailyDouble": false,
+				"pathToMedia": "",
+				"questionText": "In music, the space between one musical pitch and another with double its frequency is called what?",
+				"answerText": "An octave"
+			}
+		]
+	}
+}
