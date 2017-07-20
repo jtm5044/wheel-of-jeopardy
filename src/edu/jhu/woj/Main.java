@@ -19,6 +19,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public final static int MAX_ROUNDS_PER_GAME = 2;
+    public final static int MAX_SPINS_PER_ROUND = 2;
+    public static int roundCounter = MAX_ROUNDS_PER_GAME;
+    public static int spinsCounter = MAX_SPINS_PER_ROUND;
     public final static String DEFAULT_USR1 = "Player A";
     public final static String DEFAULT_USR2 = "Player B";
     public static Player playerA;
@@ -73,6 +77,23 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("answer/GiveAnswer.fxml"));
         BorderPane jeopardyAnswer = loader.load();
         mainLayout.setCenter(jeopardyAnswer);
+    }
+
+    public static void showStartNewRound() throws IOException {
+        System.out.println("spinCounter BEFORE resetting it: " + spinsCounter);
+        spinsCounter = MAX_SPINS_PER_ROUND;
+        System.out.println("spinCounter AFTER resetting it: " + spinsCounter);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("newround/StartNewRound.fxml"));
+        BorderPane newRounder = loader.load();
+        mainLayout.setCenter(newRounder);
+    }
+
+    public static void showGameIsOver() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("endgame/gameIsOver.fxml"));
+        BorderPane endGame = loader.load();
+        mainLayout.setCenter(endGame);
     }
 
     /**

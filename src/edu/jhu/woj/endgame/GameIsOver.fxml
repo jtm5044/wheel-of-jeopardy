@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.endgame.GameIsOverController">
     <top>
         <VBox spacing="10.0" BorderPane.alignment="CENTER">
             <children>
@@ -41,12 +41,12 @@
                                 <Insets left="15.0" right="15.0" />
                             </padding>
                         </Label>
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1">
+                        <TextField fx:id="firstPlayer" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1">
                             <GridPane.margin>
                                 <Insets />
                             </GridPane.margin>
                         </TextField>
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" />
+                        <TextField fx:id="secondPlayer" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" />
                         <Label text="Free Turn Tokens:" GridPane.rowIndex="1">
                             <padding>
                                 <Insets left="15.0" right="15.0" />
@@ -57,8 +57,8 @@
                                 <Insets left="15.0" right="15.0" />
                             </padding>
                         </Label>
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="firstPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="secondPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                     </children>
                     <padding>
                         <Insets top="10.0" />
@@ -95,13 +95,13 @@
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                     <children>
-                        <Button mnemonicParsing="false" prefWidth="50.0" text="Yes" />
-                        <Button mnemonicParsing="false" prefWidth="50.0" text="Quit" />
+                        <Button fx:id="yesButton" mnemonicParsing="false" onAction="#goStartNewGame" prefWidth="50.0" text="Yes" />
+                        <Button fx:id="quitButton" mnemonicParsing="false" onAction="#goQuitGame" prefWidth="50.0" text="Quit" />
                     </children>
                 </HBox>
                 <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../JHU/605.401-FoundationsOfSofwareEngineering/Project/wof_32_profile_icon_73x73.jpg" />
+                        <Image url="@../images/wof_32_profile_icon_73x73.jpg"/>
                     </image>
                     <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
@@ -122,7 +122,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <TextField alignment="CENTER" prefWidth="40.0" text="37" />
+                <TextField fx:id="remainingSpins" alignment="CENTER" prefWidth="40.0" />
             </children>
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

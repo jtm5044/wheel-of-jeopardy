@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
@@ -81,6 +82,19 @@
                     </VBox.margin>
                 </ImageView>
                 <Button mnemonicParsing="false" onAction="#spinWheel" prefWidth="73.0" text="Spin" />
+                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                    <children>
+                        <Label text="Spins Remaining in Round:">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="remainingSpins" prefWidth="40.0" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
             </children>
         </VBox>
     </bottom>
