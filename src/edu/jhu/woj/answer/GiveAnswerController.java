@@ -26,6 +26,10 @@ public class GiveAnswerController {
     @FXML
     private TextField secondPlayerTokens;
     @FXML
+    private TextField firstPlayerScore;
+    @FXML
+    private TextField secondPlayerScore;
+    @FXML
     private TextField remainingSpins;
     @FXML
     private Label category;
@@ -37,26 +41,60 @@ public class GiveAnswerController {
     private RadioButton wrongAnswer;
     @FXML
     private Button spinButton;
+    private Question q;
 
     @FXML
     private void initialize() {
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
-        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
         category.setText(choice);
-        Question q = Main.qb.getNextUnansweredQuestionForCategory(1, choice);
+        q = Main.qb.getNextUnansweredQuestionForCategory(1, choice);
         answer.setText(q.getAnswerText());
     }
 
     @FXML void recordRightAnswer() {
         System.out.println("You reported your answer is RIGHT");
+        q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_CORRECT);
+        Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() + q.getDollarAmount());
+        if(Main.getCurrentTurnPlayer().equals(Main.playerA))
+        {
+            firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        }else
+        {
+            secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        }
+        try {
+            Main.showMainGameScene();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML void recordWrongAnswer() {
         System.out.println("You reported your answer is WRONG");
+        q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
+        Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() - q.getDollarAmount());
+        if(Main.getCurrentTurnPlayer().equals(Main.playerA))
+        {
+            firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        }else
+        {
+            secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        }
+
+        Main.startNextTurn();
+
+        try {
+            Main.showMainGameScene();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML void spinWheel() throws IOException {

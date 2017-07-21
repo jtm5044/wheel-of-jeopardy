@@ -24,6 +24,12 @@ public class SpinWheelController {
     @FXML
     private TextField secondPlayerTokens;
     @FXML
+    private TextField firstPlayerScore;
+    @FXML
+    private TextField secondPlayerScore;
+    @FXML
+    private Label currentTurnPlayerLabel;
+    @FXML
     private TextField remainingSpins;
     @FXML
     private Label category1;
@@ -102,9 +108,12 @@ public class SpinWheelController {
     private void initialize() {
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
-        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
+        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
 
         String[] categories = Main.qb.getCategories(1);
         category1.setText(categories[0]);
@@ -171,12 +180,14 @@ public class SpinWheelController {
                 switch (choice) {
                     case Wheel.WHEEL_SECTOR_LOSE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_LOSE_TURN);
+                        Main.startNextTurn();
                         break;
                     case Wheel.WHEEL_SECTOR_FREE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_FREE_TURN);
                         break;
                     case Wheel.WHEEL_SECTOR_BANKRUPT:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_BANKRUPT);
+                        Main.startNextTurn();
                         break;
                     case Wheel.WHEEL_SECTOR_PLAYERS_CHOICE:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_PLAYERS_CHOICE);

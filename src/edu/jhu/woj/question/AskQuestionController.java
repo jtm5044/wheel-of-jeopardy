@@ -31,6 +31,10 @@ public class AskQuestionController {
     @FXML
     private TextField secondPlayerTokens;
     @FXML
+    private TextField firstPlayerScore;
+    @FXML
+    private TextField secondPlayerScore;
+    @FXML
     private TextField remainingSpins;
     @FXML
     private Label category;
@@ -40,13 +44,17 @@ public class AskQuestionController {
     private TextField countDown;
     @FXML
     private Button showAnswer;
+    private Timeline time;
 
     @FXML
     private void initialize() {
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
-        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
+
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
 
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
@@ -58,7 +66,7 @@ public class AskQuestionController {
     }
 
     private void doCountDown() {
-        Timeline time = new Timeline();
+        time = new Timeline();
         time.setCycleCount(Timeline.INDEFINITE);
         if (time != null) {
             time.stop();
@@ -84,6 +92,7 @@ public class AskQuestionController {
 
     @FXML
     private void goGiveAnswer() throws IOException{
+        time.stop();
         Main.showAnswerScene();
     }
 }

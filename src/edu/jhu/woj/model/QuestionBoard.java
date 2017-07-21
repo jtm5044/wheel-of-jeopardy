@@ -1,6 +1,7 @@
 package edu.jhu.woj.model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 /**
  * Created by jeremy on 6/22/17.

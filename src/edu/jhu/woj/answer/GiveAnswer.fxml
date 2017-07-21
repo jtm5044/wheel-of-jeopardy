@@ -17,11 +17,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
+<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
     <top>
         <VBox spacing="10.0" BorderPane.alignment="CENTER">
             <children>
-                <GridPane prefHeight="75.0" prefWidth="600.0">
+                <GridPane prefHeight="90.0" prefWidth="598.0">
                     <columnConstraints>
                         <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" percentWidth="25.0" prefWidth="0.0" />
                         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="186.0" />
@@ -31,6 +31,7 @@
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
                         <Label text="Player A:" GridPane.halignment="RIGHT">
@@ -61,6 +62,18 @@
                         </Label>
                         <TextField fx:id="firstPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="secondPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Score:" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="firstPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="secondPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                     </children>
                     <padding>
                         <Insets top="10.0" />
@@ -103,7 +116,7 @@
                 </HBox>
                 <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/wof_32_profile_icon_73x73.jpg"/>
+                        <Image url="@../images/wof_32_profile_icon_73x73.jpg" />
                     </image>
                     <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />

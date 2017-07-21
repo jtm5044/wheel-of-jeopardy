@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public final static int MAX_ROUNDS_PER_GAME = 2;
-    public final static int MAX_SPINS_PER_ROUND = 2;
+    public final static int MAX_SPINS_PER_ROUND = 50;
     public static int roundCounter = MAX_ROUNDS_PER_GAME;
     public static int spinsCounter = MAX_SPINS_PER_ROUND;
     public final static String DEFAULT_USR1 = "Player A";
@@ -32,6 +32,7 @@ public class Main extends Application {
     private Stage primaryStage;
     private static BorderPane mainLayout;
     private static BufferedReader inFile;
+    private static Player currentTurnPlayer;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -182,6 +183,17 @@ public class Main extends Application {
         wheel = new Wheel(jeopardyCategories);
         playerA = new Player(DEFAULT_USR1);
         playerB = new Player(DEFAULT_USR2);
+        currentTurnPlayer = playerA;
         launch(args);
+    }
+
+    public static Player getCurrentTurnPlayer()
+    {
+        return currentTurnPlayer;
+    }
+
+    public static void startNextTurn()
+    {
+        currentTurnPlayer = (currentTurnPlayer.equals(playerA)) ? playerB : playerA;
     }
 }
