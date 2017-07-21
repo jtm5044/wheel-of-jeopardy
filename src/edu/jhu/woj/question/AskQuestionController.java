@@ -12,15 +12,13 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.util.Duration;
 
 public class AskQuestionController {
 
     private final int TIME = 10;
-    private Integer seconds = TIME;
+    private double seconds = TIME;
 
     @FXML
     private TextField firstPlayer;
@@ -39,12 +37,15 @@ public class AskQuestionController {
     @FXML
     private Label category;
     @FXML
-    private TextField question;
+    private TextArea questionTextArea;
     @FXML
     private TextField countDown;
     @FXML
+    private ProgressBar timerProgress;
+    @FXML
     private Button showAnswer;
     private Timeline time;
+    private double timeProgressValue = 0.0;
 
     @FXML
     private void initialize() {
@@ -60,8 +61,13 @@ public class AskQuestionController {
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
         category.setText(choice);
         Question q = Main.qb.getNextUnansweredQuestionForCategory(1, choice);
-        question.setText(q.getQuestionText());
-        countDown.setText(seconds.toString());
+        //questionTextArea.setFont();
+        questionTextArea.setText(q.getQuestionText());
+        countDown.setText(Double.toString(seconds));
+        //timerProgress = new ProgressBar(1);
+        timeProgressValue = (double)(TIME-seconds)/(double)TIME;
+        //System.out.println("Time progress:" + timeProgressValue);
+        timerProgress.setProgress(timeProgressValue);
         doCountDown();
     }
 
@@ -71,11 +77,14 @@ public class AskQuestionController {
         if (time != null) {
             time.stop();
         }
-        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>(){
+        KeyFrame frame = new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>(){
 
             public void handle(ActionEvent event) {
-                seconds --;
-                countDown.setText(seconds.toString());
+                seconds -= 0.005;
+                countDown.setText(Double.toString(seconds));
+                timeProgressValue = (double)(TIME-seconds)/(double)TIME;
+                //System.out.println("Time progress:" + timeProgressValue);
+                timerProgress.setProgress(timeProgressValue);
                 if (seconds <=0) {
                     time.stop();
                     try {
