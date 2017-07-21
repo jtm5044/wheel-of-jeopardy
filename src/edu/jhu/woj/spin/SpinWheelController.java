@@ -8,10 +8,15 @@ import java.util.Random;
 import edu.jhu.woj.Main;
 import edu.jhu.woj.model.Question;
 import edu.jhu.woj.model.Wheel;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 public class SpinWheelController {
 
@@ -105,6 +110,9 @@ public class SpinWheelController {
     private Button c6q5;
 
     @FXML
+    private Label wheelOutcomeText;
+
+    @FXML
     private void initialize() {
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
@@ -180,27 +188,71 @@ public class SpinWheelController {
                 switch (choice) {
                     case Wheel.WHEEL_SECTOR_LOSE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_LOSE_TURN);
+                        wheelOutcomeText.setText("SORRY, LOSE TURN!");
                         Main.startNextTurn();
+                        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName());
                         break;
                     case Wheel.WHEEL_SECTOR_FREE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_FREE_TURN);
+                        wheelOutcomeText.setText("EARNED 1 FREE TURN TOKEN!");
+                        Main.getCurrentTurnPlayer().setPlayerTurnFreeTokens(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() + 1);
+                        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+                        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+
                         break;
                     case Wheel.WHEEL_SECTOR_BANKRUPT:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_BANKRUPT);
+                        wheelOutcomeText.setText("SORRY, BANKRUPT!");
                         Main.startNextTurn();
+                        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName());
                         break;
                     case Wheel.WHEEL_SECTOR_PLAYERS_CHOICE:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_PLAYERS_CHOICE);
+                        wheelOutcomeText.setText(Main.getCurrentTurnPlayer().getPlayerName() + ", CHOOSE A CATEGORY!");
                         break;
                     case Wheel.WHEEL_SECTOR_OPP_CHOICE:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_OPP_CHOICE);
+                        if(Main.getCurrentTurnPlayer().equals(Main.playerA))
+                        {
+                            wheelOutcomeText.setText(Main.playerB.getPlayerName() + ", CHOOSE A CATEGORY!");
+                        }else
+                        {
+                            wheelOutcomeText.setText(Main.playerA.getPlayerName() + ", CHOOSE A CATEGORY!");
+                        }
+
                         break;
                     case Wheel.WHEEL_SECTOR_SPIN_AGAIN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_SPIN_AGAIN);
+                        wheelOutcomeText.setText("SPIN AGAIN!");
                         break;
                     default:
                         System.out.println("Jeopardy!!");
-                        Main.showQuestionScene();
+                        //wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ...");
+                        Timeline time = new Timeline();
+                        time.setCycleCount(Timeline.INDEFINITE);
+                        if (time != null) {
+                            time.stop();
+                        }
+
+                        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>(){
+                            int seconds = 3;
+                            public void handle(ActionEvent event) {
+                                wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... " + (seconds-1));
+                                seconds--;
+                                if(seconds <= 0)
+                                {
+                                    try {
+                                        time.stop();
+                                        Main.showQuestionScene();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        });
+                        time.getKeyFrames().add(frame);
+                        time.playFromStart();
+
                         break;
                 }
             }
