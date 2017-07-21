@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -114,15 +111,6 @@
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </HBox>
-                <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/wof_32_profile_icon_73x73.jpg" />
-                    </image>
-                    <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                    </VBox.margin>
-                </ImageView>
-                <Button fx:id="spinButton" mnemonicParsing="false" onAction="#spinWheel" prefWidth="73.0" text="Spin" />
             </children>
             <padding>
                 <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />

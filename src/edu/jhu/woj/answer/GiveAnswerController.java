@@ -62,13 +62,8 @@ public class GiveAnswerController {
         System.out.println("You reported your answer is RIGHT");
         q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_CORRECT);
         Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() + q.getDollarAmount());
-        if(Main.getCurrentTurnPlayer().equals(Main.playerA))
-        {
-            firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        }else
-        {
-            secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
-        }
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         try {
             Main.showMainGameScene();
         } catch (IOException e) {
@@ -80,16 +75,9 @@ public class GiveAnswerController {
         System.out.println("You reported your answer is WRONG");
         q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
         Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() - q.getDollarAmount());
-        if(Main.getCurrentTurnPlayer().equals(Main.playerA))
-        {
-            firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        }else
-        {
-            secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
-        }
-
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         Main.startNextTurn();
-
         try {
             Main.showMainGameScene();
         } catch (IOException e) {
