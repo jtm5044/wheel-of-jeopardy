@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: javafx_sample_DELETE_WHEN_READY.Main
+Main-Class: edu.jhu.woj.Main
 

@@ -15,6 +15,7 @@ import edu.jhu.woj.model.Wheel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -29,6 +30,7 @@ public class Main extends Application {
     public static Player playerB;
     public static QuestionBoard qb;
     public static Wheel wheel;
+    private static boolean criticalError = false;
     private Stage primaryStage;
     private static BorderPane mainLayout;
     private static BufferedReader inFile;
@@ -122,63 +124,44 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
+        String defaultQuestionFilePath = "conf/defaultQuestions.qb";
+        String filePath = "";
         if (args.length != 1)
         {
+
             System.out.println("Usage: java Main [1]\n"
                     + "\t- Filename 1: Jeopardy Questions JSON Filename\n");
-            System.exit(1);
+            System.out.println("INFO: No file passed in, trying default...");
+            //System.exit(1);
+            filePath = defaultQuestionFilePath;
+        }else
+        {
+            filePath = args[0];
         }
 
         try {
-            inFile = new BufferedReader(new FileReader(args[0]));
+            inFile = new BufferedReader(new FileReader(filePath));
         }
         catch (IOException e) {
             System.err.println(e.toString());
-            return;
+            criticalError = true;
         }
 
         String fileContents = "";
         String line = readFromFile(inFile);
         while (line != null) {
-            fileContents = fileContents +line;
+            fileContents = fileContents + line;
             line = readFromFile(inFile);
         }
 
         try {
             inFile.close();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.err.println(e.toString());
         }
 
         Gson gson = new Gson();
         qb = gson.fromJson(fileContents, QuestionBoard.class);
-
-        /*
-        System.out.println("******* ROUND 1 DATA *****");
-        String[] cats1 = qb.getCategories(1);
-        for (int i=0; i<cats1.length; i++) {
-            System.out.println(">>>> " + cats1[i]);
-            Question[] questions = qb.getQuestionsForCategory(1, i);
-            for (int j=0; j<questions.length; j++) {
-                System.out.println((j+1) + ". " + questions[j].getQuestionText());
-                System.out.println(questions[j].getAnswerText());
-                System.out.println();
-            }
-        }
-
-        System.out.println("******* ROUND 2 DATA *****");
-        String[] cats2 = qb.getCategories(2);
-        for (int i=0; i<cats2.length; i++) {
-            System.out.println(">>>> " + cats2[i]);
-            Question[] questions = qb.getQuestionsForCategory(2, i);
-            for (int j=0; j<questions.length; j++) {
-                System.out.println((j+1) + ". " + questions[j].getQuestionText());
-                System.out.println(questions[j].getAnswerText());
-                System.out.println();
-            }
-        }
-        */
 
         List<String> jeopardyCategories = Arrays.asList(qb.getCategories(Main.currentRound));
         wheel = new Wheel(jeopardyCategories);
