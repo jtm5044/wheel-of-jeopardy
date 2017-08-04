@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.spin.SpinWheelController">
+    <top>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefHeight="90.0" prefWidth="598.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" percentWidth="25.0" prefWidth="0.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="186.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="256.0" minWidth="0.0" percentWidth="25.0" prefWidth="139.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="188.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Player A:" GridPane.halignment="RIGHT">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <Label text="Player B:" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="firstPlayer" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="secondPlayer" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" />
+                        <Label text="Free Turn Tokens:" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <Label text="Free Turn Tokens:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="firstPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="secondPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Round Score:" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="firstPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Round Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="secondPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </GridPane>
+                <Separator prefWidth="200.0" />
+            <HBox prefHeight="32.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="currentTurnPlayerLabel" text="Player X's Turn">
+                     <padding>
+                        <Insets left="20.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </top>
+    <bottom>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="125.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="73.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/wof_32_profile_icon_73x73.jpg" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button fx:id="spinWheelButton" mnemonicParsing="false" onAction="#spinWheel" prefWidth="73.0" text="Spin" />
+            <Label fx:id="wheelOutcomeText" text="Wheel Outcome" />
+                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                    <children>
+                        <Label text="Spins Remaining in Round:">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="remainingSpins" prefWidth="40.0" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+    <center>
+        <GridPane alignment="CENTER" hgap="5.0" prefWidth="600.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <Button fx:id="category1" disable="true" onAction="#cat1ButtonPressed" style="-fx-text-fill: #000000;" text="Category 1">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Button fx:id="category2" disable="true" onAction="#cat2ButtonPressed" style="-fx-text-fill: #000000;" text="Category 2" GridPane.columnIndex="1">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Button fx:id="category3" disable="true" onAction="#cat3ButtonPressed" style="-fx-text-fill: #000000;" text="Category 3" GridPane.columnIndex="2">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Button fx:id="category4" disable="true" onAction="#cat4ButtonPressed" style="-fx-text-fill: #000000;" text="Category 4" GridPane.columnIndex="3">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Button fx:id="category5" disable="true" onAction="#cat5ButtonPressed" style="-fx-text-fill: #000000;" text="Category 5" GridPane.columnIndex="4">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Button fx:id="category6" disable="true" onAction="#cat6ButtonPressed" text="Category 6" GridPane.columnIndex="5">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+                </Button>
+                <Label fx:id="c1q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.rowIndex="1" />
+                <Label fx:id="c1q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.rowIndex="2" />
+                <Label fx:id="c1q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.rowIndex="3" />
+                <Label fx:id="c1q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.rowIndex="4" />
+                <Label fx:id="c1q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.rowIndex="5" />
+                <Label fx:id="c2q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="c3q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="c4q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label fx:id="c5q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Label fx:id="c6q1" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Label fx:id="c2q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="c3q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="c4q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label fx:id="c5q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Label fx:id="c6q2" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Label fx:id="c2q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="c3q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label fx:id="c4q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Label fx:id="c5q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Label fx:id="c6q3" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Label fx:id="c2q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="c3q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Label fx:id="c4q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Label fx:id="c5q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Label fx:id="c6q5" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Label fx:id="c2q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="c3q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Label fx:id="c4q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Label fx:id="c5q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Label fx:id="c6q4" alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #0000ff;" text="TBD" textFill="#fff078" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+    </center>
+</BorderPane>
