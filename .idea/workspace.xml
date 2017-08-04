@@ -9,12 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/default.qb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jhu/woj/Main.java" afterPath="$PROJECT_DIR$/src/edu/jhu/woj/Main.java" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -141,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="215" column="25" lean-forward="true" selection-start-line="199" selection-start-column="24" selection-end-line="215" selection-end-column="25" />
+              <caret line="215" column="25" lean-forward="false" selection-start-line="199" selection-start-column="24" selection-end-line="215" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#16240#16241#0" expanded="true" />
@@ -165,7 +160,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/question/AskQuestionController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -913,23 +908,23 @@
         <state relative-caret-position="645">
           <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding>
-            <marker date="1500597445000" expanded="true" signature="3047:3226" ph="/**...*/" />
-            <marker date="1500597445000" expanded="false" signature="3278:3293" ph=" { " />
-            <marker date="1500597445000" expanded="false" signature="3329:3335" ph=" }" />
-            <marker date="1500597445000" expanded="true" signature="3341:3553" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="3621:3960" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="3966:4220" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="4300:4497" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="4503:4585" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="4620:4927" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="4933:5048" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="5084:5187" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="5193:5348" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="5396:5663" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="5669:5967" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="6051:6474" ph="{...}" />
-            <marker date="1500597445000" expanded="true" signature="6480:6647" ph="/**...*/" />
-            <marker date="1500597445000" expanded="true" signature="6711:6906" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="3047:3226" ph="/**...*/" />
+            <marker date="1501827526000" expanded="false" signature="3278:3293" ph=" { " />
+            <marker date="1501827526000" expanded="false" signature="3329:3335" ph=" }" />
+            <marker date="1501827526000" expanded="true" signature="3341:3553" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="3621:3960" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="3966:4220" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="4300:4497" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="4503:4585" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="4620:4927" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="4933:5048" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="5084:5187" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="5193:5348" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="5396:5663" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="5669:5967" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="6051:6474" ph="{...}" />
+            <marker date="1501827526000" expanded="true" signature="6480:6647" ph="/**...*/" />
+            <marker date="1501827526000" expanded="true" signature="6711:6906" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -967,8 +962,8 @@
         <state relative-caret-position="540">
           <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
           <folding>
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -981,7 +976,7 @@
         <state relative-caret-position="420">
           <caret line="66" column="37" lean-forward="false" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
           <folding>
-            <marker date="1501817566000" expanded="true" signature="6399:6423" ph="..." />
+            <marker date="1501827526000" expanded="true" signature="6399:6423" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1065,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/question/AskQuestionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1075,7 +1070,7 @@
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="215" column="25" lean-forward="true" selection-start-line="199" selection-start-column="24" selection-end-line="215" selection-end-column="25" />
+          <caret line="215" column="25" lean-forward="false" selection-start-line="199" selection-start-column="24" selection-end-line="215" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#16240#16241#0" expanded="true" />
