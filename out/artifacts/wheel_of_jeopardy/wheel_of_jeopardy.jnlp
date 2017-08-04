@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="wheel_of_jeopardy.jnlp">
+  <information>
+    <title>Wheel of Jeopardy</title>
+    <vendor>Squad Awesome</vendor>
+    <description>wheel-of-jeopardy</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/gson-2.8.1.jar" size="232620" download="eager" />
+    <jar href="wheel_of_jeopardy.jar" size="110922" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="edu.jhu.woj.Main"  name="wheel-of-jeopardy" />
+  <update check="background"/>
+</jnlp>
