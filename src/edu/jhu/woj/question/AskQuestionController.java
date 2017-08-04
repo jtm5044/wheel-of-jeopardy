@@ -35,6 +35,8 @@ public class AskQuestionController {
     @FXML
     private TextField remainingSpins;
     @FXML
+    private Label playerNameText;
+    @FXML
     private Label category;
     @FXML
     private TextArea questionTextArea;
@@ -55,12 +57,12 @@ public class AskQuestionController {
         secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
         secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
-
+        playerNameText.setText(Main.getCurrentTurnPlayer().getPlayerName() + ", Answer Now!");
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
 
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
         category.setText(choice);
-        Question q = Main.qb.getNextUnansweredQuestionForCategory(1, choice);
+        Question q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
         //questionTextArea.setFont();
         questionTextArea.setText(q.getQuestionText());
         countDown.setText(Double.toString(seconds));

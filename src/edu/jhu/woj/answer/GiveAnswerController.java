@@ -4,16 +4,14 @@ package edu.jhu.woj.answer;
  * Created by Graciela on 7/12/2017.
  */
 import java.io.IOException;
+import java.util.Optional;
 import java.util.Random;
 
 import edu.jhu.woj.Main;
 import edu.jhu.woj.model.Question;
 import edu.jhu.woj.model.Wheel;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class GiveAnswerController {
 
@@ -54,7 +52,7 @@ public class GiveAnswerController {
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
         category.setText(choice);
-        q = Main.qb.getNextUnansweredQuestionForCategory(1, choice);
+        q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
         answer.setText(q.getAnswerText());
     }
 
@@ -73,11 +71,27 @@ public class GiveAnswerController {
 
     @FXML void recordWrongAnswer() {
         System.out.println("You reported your answer is WRONG");
-        q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
         Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() - q.getDollarAmount());
         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
         secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
-        Main.startNextTurn();
+        q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
+
+        if(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() > 0) {
+            boolean useToken = showUseFreeTokenDialog();
+            if(!useToken)
+            {
+                Main.startNextTurn();
+
+            }else
+            {
+                Main.getCurrentTurnPlayer().setPlayerTurnFreeTokens(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() - 1);
+                firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+                secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+            }
+        }else {
+            Main.startNextTurn();
+        }
+
         try {
             Main.showMainGameScene();
         } catch (IOException e) {
@@ -85,51 +99,22 @@ public class GiveAnswerController {
         }
     }
 
-    @FXML void spinWheel() throws IOException {
-        if (Main.roundCounter > 0) {
-            if (Main.spinsCounter > 0) {
-                Random rand = new Random();
-                int randomSector = rand.nextInt(11) + 0;
-                Main.wheel.setCurrentlySelectedWheelIndex(randomSector);
-                String choice = Main.wheel.getCurrentlySelectedWheelSector();
-                System.out.println(randomSector + "\t\t" + choice + "\t\t" + "spinsCounter: " + Main.spinsCounter + "\t\t" + "roundsCounter: " + Main.roundCounter);
-                Main.spinsCounter--;
-                remainingSpins.setText(Integer.toString(Main.spinsCounter));
-                switch (choice) {
-                    case Wheel.WHEEL_SECTOR_LOSE_TURN:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_LOSE_TURN);
-                        break;
-                    case Wheel.WHEEL_SECTOR_FREE_TURN:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_FREE_TURN);
-                        break;
-                    case Wheel.WHEEL_SECTOR_BANKRUPT:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_BANKRUPT);
-                        break;
-                    case Wheel.WHEEL_SECTOR_PLAYERS_CHOICE:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_PLAYERS_CHOICE);
-                        break;
-                    case Wheel.WHEEL_SECTOR_OPP_CHOICE:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_OPP_CHOICE);
-                        break;
-                    case Wheel.WHEEL_SECTOR_SPIN_AGAIN:
-                        System.out.println("Do action for " + Wheel.WHEEL_SECTOR_SPIN_AGAIN);
-                        break;
-                    default:
-                        System.out.println("Jeopardy!!");
-                        Main.showQuestionScene();
-                        break;
-                }
-            }
-            else {
-                Main.roundCounter--;
-                System.out.println("roundCounter at GiveAnswerController: " + Main.roundCounter);
-                if (Main.roundCounter > 0) {
-                    Main.showStartNewRound();
-                }
-                else {
-                    Main.showGameIsOver();
-                }
-            }
+    private boolean showUseFreeTokenDialog() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("LOSE TURN");
+        alert.setHeaderText(Main.getCurrentTurnPlayer().getPlayerName() + ", you've lost your turn");
+        alert.setContentText("Would you like to use a free token? Free tokens remaining: " + Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens());
+
+        ButtonType buttonTypeYes = new ButtonType("Yes");
+        ButtonType buttonTypeCancel = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == buttonTypeYes){
+            return true;
+        } else {
+            return false;
         }
     }
 }

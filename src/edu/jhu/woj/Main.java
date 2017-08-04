@@ -33,6 +33,7 @@ public class Main extends Application {
     private static BorderPane mainLayout;
     private static BufferedReader inFile;
     private static Player currentTurnPlayer;
+    public static int currentRound = 1;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -179,7 +180,7 @@ public class Main extends Application {
         }
         */
 
-        List<String> jeopardyCategories = Arrays.asList(qb.getCategories(1));
+        List<String> jeopardyCategories = Arrays.asList(qb.getCategories(Main.currentRound));
         wheel = new Wheel(jeopardyCategories);
         playerA = new Player(DEFAULT_USR1);
         playerB = new Player(DEFAULT_USR2);
@@ -195,5 +196,28 @@ public class Main extends Application {
     public static void startNextTurn()
     {
         currentTurnPlayer = (currentTurnPlayer.equals(playerA)) ? playerB : playerA;
+    }
+
+    public static void startNewRound()
+    {
+        Main.playerA.setPlayerScore(0);
+        Main.playerB.setPlayerScore(0);
+        Main.currentRound++;
+        List<String> jeopardyCategories = Arrays.asList(qb.getCategories(Main.currentRound));
+        wheel = new Wheel(jeopardyCategories);
+
+    }
+
+    public static void startNewGame()
+    {
+        roundCounter = MAX_ROUNDS_PER_GAME;
+        spinsCounter = MAX_SPINS_PER_ROUND;
+        Main.currentRound = 1;
+        qb.resetQuestionBoard();
+        List<String> jeopardyCategories = Arrays.asList(qb.getCategories(Main.currentRound));
+        wheel = new Wheel(jeopardyCategories);
+        playerA = new Player(playerA.getPlayerName());
+        playerB = new Player(playerB.getPlayerName());
+        currentTurnPlayer = playerA;
     }
 }

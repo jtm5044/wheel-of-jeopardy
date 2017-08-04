@@ -49,9 +49,11 @@ public class Player {
 
     public void goBankrupt() {
         int roundScore = this.getPlayerScore();
-        int finalScore = this.getPlayerFinalScore();
-        this.setPlayerScore(0);
-        this.setPlayerFinalScore(finalScore-roundScore);
+        // Only set to zero if the player's round score is positive.
+        if(roundScore > 0)
+        {
+            this.setPlayerScore(0);
+        }
     }
 }
 

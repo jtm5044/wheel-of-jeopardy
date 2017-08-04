@@ -8,7 +8,4 @@
     <padding>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
     </padding>
-    <bottom>
-        <Button mnemonicParsing="false" text="This Button Will Go Away Eventually" BorderPane.alignment="CENTER" />
-    </bottom>
 </BorderPane>

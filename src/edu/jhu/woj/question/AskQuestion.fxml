@@ -60,12 +60,12 @@
                         </Label>
                         <TextField fx:id="firstPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="secondPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label text="Score:" GridPane.rowIndex="2">
+                  <Label text="Round Score:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label text="Round Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -87,7 +87,7 @@
     <center>
         <VBox alignment="BASELINE_CENTER" minHeight="-Infinity" prefHeight="275.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="Wheel Sector">
+                <Label fx:id="playerNameText" text="Player X's Turn">
                     <font>
                         <Font size="20.0" />
                     </font>

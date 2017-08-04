@@ -4,6 +4,7 @@ package edu.jhu.woj.spin;
  * Created by Graciela on 7/12/2017.
  */
 import java.io.IOException;
+import java.util.Optional;
 import java.util.Random;
 import edu.jhu.woj.Main;
 import edu.jhu.woj.model.Question;
@@ -13,9 +14,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.util.Duration;
 
 public class SpinWheelController {
@@ -37,80 +36,83 @@ public class SpinWheelController {
     @FXML
     private TextField remainingSpins;
     @FXML
-    private Label category1;
+    private Button category1;
     @FXML
-    private Label category2;
+    private Button category2;
     @FXML
-    private Label category3;
+    private Button category3;
     @FXML
-    private Label category4;
+    private Button category4;
     @FXML
-    private Label category5;
+    private Button category5;
     @FXML
-    private Label category6;
+    private Button category6;
     @FXML
-    private Button c1q1;
+    private Label c1q1;
     @FXML
-    private Button c1q2;
+    private Label c1q2;
     @FXML
-    private Button c1q3;
+    private Label c1q3;
     @FXML
-    private Button c1q4;
+    private Label c1q4;
     @FXML
-    private Button c1q5;
+    private Label c1q5;
     @FXML
-    private Button c2q1;
+    private Label c2q1;
     @FXML
-    private Button c2q2;
+    private Label c2q2;
     @FXML
-    private Button c2q3;
+    private Label c2q3;
     @FXML
-    private Button c2q4;
+    private Label c2q4;
     @FXML
-    private Button c2q5;
+    private Label c2q5;
     @FXML
-    private Button c3q1;
+    private Label c3q1;
     @FXML
-    private Button c3q2;
+    private Label c3q2;
     @FXML
-    private Button c3q3;
+    private Label c3q3;
     @FXML
-    private Button c3q4;
+    private Label c3q4;
     @FXML
-    private Button c3q5;
+    private Label c3q5;
     @FXML
-    private Button c4q1;
+    private Label c4q1;
     @FXML
-    private Button c4q2;
+    private Label c4q2;
     @FXML
-    private Button c4q3;
+    private Label c4q3;
     @FXML
-    private Button c4q4;
+    private Label c4q4;
     @FXML
-    private Button c4q5;
+    private Label c4q5;
     @FXML
-    private Button c5q1;
+    private Label c5q1;
     @FXML
-    private Button c5q2;
+    private Label c5q2;
     @FXML
-    private Button c5q3;
+    private Label c5q3;
     @FXML
-    private Button c5q4;
+    private Label c5q4;
     @FXML
-    private Button c5q5;
+    private Label c5q5;
     @FXML
-    private Button c6q1;
+    private Label c6q1;
     @FXML
-    private Button c6q2;
+    private Label c6q2;
     @FXML
-    private Button c6q3;
+    private Label c6q3;
     @FXML
-    private Button c6q4;
+    private Label c6q4;
     @FXML
-    private Button c6q5;
+    private Label c6q5;
 
     @FXML
     private Label wheelOutcomeText;
+
+    @FXML
+    private Button spinWheelButton;
 
     @FXML
     private void initialize() {
@@ -122,8 +124,8 @@ public class SpinWheelController {
         secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
         currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
-
-        String[] categories = Main.qb.getCategories(1);
+        spinWheelButton.setDisable(false);
+        String[] categories = Main.qb.getCategories(Main.currentRound);
         category1.setText(categories[0]);
         category2.setText(categories[1]);
         category3.setText(categories[2]);
@@ -131,53 +133,59 @@ public class SpinWheelController {
         category5.setText(categories[4]);
         category6.setText(categories[5]);
 
-        Question[] questions = Main.qb.getQuestionsForCategory(1, 0);
-        c1q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c1q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c1q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c1q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c1q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        Question[] questions = Main.qb.getQuestionsForCategory(Main.currentRound, 0);
+        c1q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c1q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c1q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c1q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c1q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
 
-        questions = Main.qb.getQuestionsForCategory(1, 1);
-        c2q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c2q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c2q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c2q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c2q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        questions = Main.qb.getQuestionsForCategory(Main.currentRound, 1);
+        c2q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c2q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c2q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c2q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c2q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
 
-        questions = Main.qb.getQuestionsForCategory(1, 2);
-        c3q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c3q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c3q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c3q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c3q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        questions = Main.qb.getQuestionsForCategory(Main.currentRound, 2);
+        c3q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c3q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c3q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c3q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c3q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
 
-        questions = Main.qb.getQuestionsForCategory(1, 3);
-        c4q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c4q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c4q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c4q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c4q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        questions = Main.qb.getQuestionsForCategory(Main.currentRound, 3);
+        c4q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c4q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c4q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c4q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c4q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
 
-        questions = Main.qb.getQuestionsForCategory(1, 4);
-        c5q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c5q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c5q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c5q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c5q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        questions = Main.qb.getQuestionsForCategory(Main.currentRound, 4);
+        c5q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c5q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c5q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c5q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c5q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
 
-        questions = Main.qb.getQuestionsForCategory(1, 5);
-        c6q1.setText(Integer.toString(questions[0].getDollarAmount()));
-        c6q2.setText(Integer.toString(questions[1].getDollarAmount()));
-        c6q3.setText(Integer.toString(questions[2].getDollarAmount()));
-        c6q4.setText(Integer.toString(questions[3].getDollarAmount()));
-        c6q5.setText(Integer.toString(questions[4].getDollarAmount()));
+        questions = Main.qb.getQuestionsForCategory(Main.currentRound, 5);
+        c6q1.setText(questions[0].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[0].getDollarAmount()) : "--");
+        c6q2.setText(questions[1].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[1].getDollarAmount()) : "--");
+        c6q3.setText(questions[2].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[2].getDollarAmount()) : "--");
+        c6q4.setText(questions[3].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[3].getDollarAmount()) : "--");
+        c6q5.setText(questions[4].getState() == Question.QuestionState.QUESTION_STATE_UNANSWERED ? Integer.toString(questions[4].getDollarAmount()) : "--");
+
+        if(Main.spinsCounter == 0)
+        {
+            outOfSpins();
+        }
     }
 
     @FXML
     private void spinWheel() throws IOException {
         if (Main.roundCounter > 0) {
-            if (Main.spinsCounter > 0) {
+             if (Main.spinsCounter > 0) {
+                spinWheelButton.setDisable(true);
                 Random rand = new Random();
                 int randomSector = rand.nextInt(11) + 0;
                 Main.wheel.setCurrentlySelectedWheelIndex(randomSector);
@@ -189,83 +197,205 @@ public class SpinWheelController {
                     case Wheel.WHEEL_SECTOR_LOSE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_LOSE_TURN);
                         wheelOutcomeText.setText("SORRY, LOSE TURN!");
-                        Main.startNextTurn();
-                        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName());
+                        if(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() > 0) {
+                            boolean useToken = showUseFreeTokenDialog();
+                            if(!useToken)
+                            {
+                                Main.startNextTurn();
+                                currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
+                            }else
+                            {
+                                Main.getCurrentTurnPlayer().setPlayerTurnFreeTokens(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() - 1);
+                                firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+                                secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+                                wheelOutcomeText.setText("FREE TOKEN REDEEMED. SPIN AGAIN.");
+                            }
+                        }else {
+                            Main.startNextTurn();
+                            currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
+                        }
+                        spinWheelButton.setDisable(false);
                         break;
                     case Wheel.WHEEL_SECTOR_FREE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_FREE_TURN);
-                        wheelOutcomeText.setText("EARNED 1 FREE TURN TOKEN!");
+                        wheelOutcomeText.setText("EARNED 1 FREE TURN TOKEN!, SPIN AGAIN!");
                         Main.getCurrentTurnPlayer().setPlayerTurnFreeTokens(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() + 1);
                         firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
                         secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
-
+                        spinWheelButton.setDisable(false);
                         break;
                     case Wheel.WHEEL_SECTOR_BANKRUPT:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_BANKRUPT);
                         wheelOutcomeText.setText("SORRY, BANKRUPT!");
+                        Main.getCurrentTurnPlayer().goBankrupt();
+                        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
+                        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
                         Main.startNextTurn();
-                        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName());
+                        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
+                        spinWheelButton.setDisable(false);
                         break;
                     case Wheel.WHEEL_SECTOR_PLAYERS_CHOICE:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_PLAYERS_CHOICE);
-                        wheelOutcomeText.setText(Main.getCurrentTurnPlayer().getPlayerName() + ", CHOOSE A CATEGORY!");
+                        wheelOutcomeText.setText("PLAYER'S CHOICE: " + Main.getCurrentTurnPlayer().getPlayerName() + ", CHOOSE A CATEGORY!");
+                        disableCategoryButtons(false);
                         break;
                     case Wheel.WHEEL_SECTOR_OPP_CHOICE:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_OPP_CHOICE);
                         if(Main.getCurrentTurnPlayer().equals(Main.playerA))
                         {
-                            wheelOutcomeText.setText(Main.playerB.getPlayerName() + ", CHOOSE A CATEGORY!");
+                            wheelOutcomeText.setText("OPPONENT'S CHOICE: " + Main.playerB.getPlayerName() + ", CHOOSE A CATEGORY!");
                         }else
                         {
-                            wheelOutcomeText.setText(Main.playerA.getPlayerName() + ", CHOOSE A CATEGORY!");
+                            wheelOutcomeText.setText("OPPONENT'S CHOICE: " + Main.playerA.getPlayerName() + ", CHOOSE A CATEGORY!");
                         }
-
+                        disableCategoryButtons(false);
                         break;
                     case Wheel.WHEEL_SECTOR_SPIN_AGAIN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_SPIN_AGAIN);
                         wheelOutcomeText.setText("SPIN AGAIN!");
+                        spinWheelButton.setDisable(false);
                         break;
                     default:
-                        System.out.println("Jeopardy!!");
-                        //wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ...");
-                        Timeline time = new Timeline();
-                        time.setCycleCount(Timeline.INDEFINITE);
-                        if (time != null) {
-                            time.stop();
-                        }
-
-                        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>(){
-                            int seconds = 3;
-                            public void handle(ActionEvent event) {
-                                wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... " + (seconds-1));
-                                seconds--;
-                                if(seconds <= 0)
-                                {
-                                    try {
-                                        time.stop();
-                                        Main.showQuestionScene();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-                        });
-                        time.getKeyFrames().add(frame);
-                        time.playFromStart();
-
+                        System.out.println("Jeopardy!, Category: " + choice);
+                        wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ...");
+                        showQuestion(choice);
                         break;
                 }
             }
             else {
-                Main.roundCounter--;
-                System.out.println("roundCounter at SpinWheelController: " + Main.roundCounter);
-                if (Main.roundCounter >0) {
-                    Main.showStartNewRound();
-                }
-                else {
-                    Main.showGameIsOver();
-                }
+                 outOfSpins();
             }
         }
+    }
+
+    private void outOfSpins()
+    {
+        spinWheelButton.setDisable(true);
+        wheelOutcomeText.setText("OUT OF SPINS, ROUND IS OVER...");
+        Timeline time = new Timeline();
+        time.setCycleCount(Timeline.INDEFINITE);
+        if (time != null) {
+            time.stop();
+        }
+
+        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>(){
+            int seconds = 3;
+            public void handle(ActionEvent event) {
+                wheelOutcomeText.setText("OUT OF SPINS, ROUND IS OVER... " + (seconds-1));
+                seconds--;
+                if(seconds <= 0)
+                {
+                    try {
+                        time.stop();
+                        spinWheelButton.setDisable(false);
+                        Main.roundCounter--;
+                        System.out.println("roundCounter at SpinWheelController: " + Main.roundCounter);
+                        if (Main.roundCounter > 0) {
+                            Main.showStartNewRound();
+                        } else {
+                            Main.showGameIsOver();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        time.getKeyFrames().add(frame);
+        time.playFromStart();
+    }
+
+    private boolean showUseFreeTokenDialog() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("LOSE TURN");
+        alert.setHeaderText(Main.getCurrentTurnPlayer().getPlayerName() + ", you've lost your turn");
+        alert.setContentText("Would you like to use a free token? Free tokens remaining: " + Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens());
+
+        ButtonType buttonTypeYes = new ButtonType("Yes");
+        ButtonType buttonTypeCancel = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == buttonTypeYes){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @FXML
+    private void cat1ButtonPressed()
+    {
+        categoryButtonPressed(category1.getText());
+    }
+    @FXML
+    private void cat2ButtonPressed()
+    {
+        categoryButtonPressed(category2.getText());
+    }@FXML
+    private void cat3ButtonPressed()
+    {
+        categoryButtonPressed(category3.getText());
+    }@FXML
+    private void cat4ButtonPressed()
+    {
+        categoryButtonPressed(category4.getText());
+    }@FXML
+    private void cat5ButtonPressed()
+    {
+        categoryButtonPressed(category5.getText());
+    }@FXML
+    private void cat6ButtonPressed()
+    {
+        categoryButtonPressed(category6.getText());
+    }
+
+    private void categoryButtonPressed(String choice)
+    {
+        disableCategoryButtons(true);
+        wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... ");
+        Main.wheel.setCurrentlySelectedWheelSector(choice);
+        showQuestion(choice);
+    }
+
+    private void disableCategoryButtons(boolean disable)
+    {
+        category1.setDisable(disable);
+        category2.setDisable(disable);
+        category3.setDisable(disable);
+        category4.setDisable(disable);
+        category5.setDisable(disable);
+        category6.setDisable(disable);
+    }
+
+    private void showQuestion(String choice)
+    {
+        Timeline time = new Timeline();
+        time.setCycleCount(Timeline.INDEFINITE);
+        if (time != null) {
+            time.stop();
+        }
+
+        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>(){
+            int seconds = 3;
+            public void handle(ActionEvent event) {
+                wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... " + (seconds-1));
+                seconds--;
+                if(seconds <= 0)
+                {
+                    try {
+                        spinWheelButton.setDisable(false);
+                        time.stop();
+                        Main.showQuestionScene();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        time.getKeyFrames().add(frame);
+        time.playFromStart();
+
     }
 }

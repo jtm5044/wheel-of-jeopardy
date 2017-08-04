@@ -18,22 +18,33 @@ public class StartNewRoundController {
     @FXML
     private TextField secondPlayerTokens;
     @FXML
+    private TextField firstPlayerScore;
+    @FXML
+    private TextField secondPlayerScore;
+    @FXML
     private TextField remainingSpins;
     @FXML
     private Button startNewRound;
 
     @FXML
     private void initialize() {
+
+        Main.playerA.setPlayerFinalScore(Main.playerA.getPlayerScore());
+        Main.playerB.setPlayerFinalScore(Main.playerB.getPlayerScore());
+
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
-        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerScore()));
-        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerScore()));
+        firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
+        secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
+        firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerFinalScore()));
+        secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerFinalScore()));
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
     }
 
     @FXML
     private void goStartAgain() throws IOException{
         System.out.println("roundCounter at StartNewRoundController: " + Main.roundCounter);
+        Main.startNewRound();
         Main.showMainGameScene();
         /*
         if (Main.roundCounter > 0) {

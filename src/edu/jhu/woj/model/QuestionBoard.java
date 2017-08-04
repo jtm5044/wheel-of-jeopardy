@@ -2,6 +2,7 @@ package edu.jhu.woj.model;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Created by jeremy on 6/22/17.
@@ -128,6 +129,26 @@ public class QuestionBoard {
             }
         } else {
             throw new RuntimeException("Unexpected error. Could not get questions.");
+        }
+    }
+
+    public void resetQuestionBoard()
+    {
+        for (Map.Entry<String, ArrayList<Question>> entry : firstRoundCategories.entrySet()) {
+            String key = entry.getKey();
+            ArrayList<Question> value = entry.getValue();
+            for(Question q : value)
+            {
+                q.setState(Question.QuestionState.QUESTION_STATE_UNANSWERED);
+            }
+        }
+        for (Map.Entry<String, ArrayList<Question>> entry : secondRoundCategories.entrySet()) {
+            String key = entry.getKey();
+            ArrayList<Question> value = entry.getValue();
+            for(Question q : value)
+            {
+                q.setState(Question.QuestionState.QUESTION_STATE_UNANSWERED);
+            }
         }
     }
 }
