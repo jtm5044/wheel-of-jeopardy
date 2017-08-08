@@ -123,7 +123,7 @@ public class SpinWheelController {
         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
         secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
-        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn");
+        currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn...  Press Spin!");
         spinWheelButton.setDisable(false);
         String[] categories = Main.qb.getCategories(Main.currentRound);
         category1.setText(categories[0]);

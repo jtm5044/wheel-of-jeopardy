@@ -9,9 +9,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="FIXED. Round Score and Spins Remaining in round are editable and they shouldn't be.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/wheel-of-jeopardy/edu/jhu/woj/spin/SpinWheel.fxml" afterPath="$PROJECT_DIR$/out/production/wheel-of-jeopardy/edu/jhu/woj/spin/SpinWheel.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml" afterPath="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java" afterPath="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,31 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionBoard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerNamesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNamesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpinWheelController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpinWheelController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="108" column="23" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="108" selection-end-column="23" />
+            <state relative-caret-position="208">
+              <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,24 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerNames.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNames.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-159">
-              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpinWheel.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpinWheel.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="115" column="58" lean-forward="false" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+            <state relative-caret-position="289">
+              <caret line="17" column="179" lean-forward="false" selection-start-line="17" selection-start-column="179" selection-end-line="17" selection-end-column="179" />
               <folding />
             </state>
           </provider>
@@ -158,7 +127,6 @@
       <find>firstr</find>
       <find>image</find>
       <find>j</find>
-      <find>jpg</find>
       <find>woj</find>
       <find>graciela</find>
       <find>language</find>
@@ -166,9 +134,12 @@
       <find>c6q1</find>
       <find>spinWheel</find>
       <find>jp</find>
-      <find>buttonbar</find>
       <find>first</find>
       <find>remainin</find>
+      <find>buttonbar</find>
+      <find>jpg</find>
+      <find>jph</find>
+      <find>'s</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -210,12 +181,12 @@
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/endgame/GameIsOverController.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/question/AskQuestion.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/question/AskQuestionController.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/answer/GiveAnswerController.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/view/MainView.fxml" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/Main.java" />
         <option value="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java" />
       </list>
     </option>
   </component>
@@ -555,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500079142068</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="FIXED. Round Score and Spins Remaining in round are editable and they shouldn't be.">
+      <created>1502164107581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1502164107582</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -653,7 +631,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adhering as much as I can to the MVC design pattern (new to me) I was able to work on the following:&#10;- Model &#10;o Player model&#10;- Views: &#10;o Player names view&#10;o Spin wheel view&#10;o Ask question view&#10;o Start new round view (screenshot not shown)&#10;o Game is over view (screenshot not shown)&#10;o Give answer view&#10;- Controllers: &#10;o Player names controller&#10;o Spin wheel controller&#10;o Ask question controller&#10;o Give answer controller" />
     <MESSAGE value="-&#9;Added spin counter display on all relevant screens.&#10;-&#9;Work on “Jeopardy ask question” screen:&#10;o&#9;Added countdown timer&#10;o&#9;Implemented “spin” button action&#10;o&#9;Implemented “show answer” button action&#10;-&#9;Questions AND answers are now automatically populated on the screens via the JSON file data.&#10;-&#9;Implemented “dummy” actions when the yes/no radio buttons are pressed to self-report answer correctness.&#10;o&#9;The “dummy” action is a text message in the console.&#10;-&#9;Controllers added:&#10;o&#9;StartNewRoundController&#10;o&#9;GameIsOverController&#10;-&#9;Work on “Round is Over” screen:&#10;o&#9;Screen is displayed when spinCounter = 0 for a given round&#10;o&#9;Implemented “start new round” button action&#10;-&#9;Work on “Game is Over” screen:&#10;o&#9;Screen is displayed upon finishing the 2 rounds of the game&#10;NOTE: No actions have been implemented on the elements of this screen, though." />
-    <option name="LAST_COMMIT_MESSAGE" value="-&#9;Added spin counter display on all relevant screens.&#10;-&#9;Work on “Jeopardy ask question” screen:&#10;o&#9;Added countdown timer&#10;o&#9;Implemented “spin” button action&#10;o&#9;Implemented “show answer” button action&#10;-&#9;Questions AND answers are now automatically populated on the screens via the JSON file data.&#10;-&#9;Implemented “dummy” actions when the yes/no radio buttons are pressed to self-report answer correctness.&#10;o&#9;The “dummy” action is a text message in the console.&#10;-&#9;Controllers added:&#10;o&#9;StartNewRoundController&#10;o&#9;GameIsOverController&#10;-&#9;Work on “Round is Over” screen:&#10;o&#9;Screen is displayed when spinCounter = 0 for a given round&#10;o&#9;Implemented “start new round” button action&#10;-&#9;Work on “Game is Over” screen:&#10;o&#9;Screen is displayed upon finishing the 2 rounds of the game&#10;NOTE: No actions have been implemented on the elements of this screen, though." />
+    <MESSAGE value="FIXED. Round Score and Spins Remaining in round are editable and they shouldn't be." />
+    <option name="LAST_COMMIT_MESSAGE" value="FIXED. Round Score and Spins Remaining in round are editable and they shouldn't be." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,6 +832,55 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/MainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="212" lean-forward="true" selection-start-line="6" selection-start-column="212" selection-end-line="6" selection-end-column="212" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNames.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNamesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="179" lean-forward="false" selection-start-line="17" selection-start-column="179" selection-end-line="17" selection-end-column="179" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -867,63 +895,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/model/QuestionBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNamesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/MainView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="212" lean-forward="true" selection-start-line="6" selection-start-column="212" selection-end-line="6" selection-end-column="212" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="108" column="23" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="108" selection-end-column="23" />
+        <state relative-caret-position="208">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/view/PlayerNames.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jhu/woj/spin/SpinWheel.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="115" column="58" lean-forward="false" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
   </component>
