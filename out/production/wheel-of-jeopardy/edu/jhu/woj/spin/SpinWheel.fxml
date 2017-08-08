@@ -65,13 +65,13 @@
                         <Insets right="15.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="firstPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="firstPlayerScore" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Round Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <padding>
                         <Insets right="15.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="secondPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="secondPlayerScore" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                     </children>
                     <padding>
                         <Insets top="10.0" />
@@ -113,7 +113,7 @@
                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                             </padding>
                         </Label>
-                        <TextField fx:id="remainingSpins" prefWidth="40.0" />
+                        <TextField fx:id="remainingSpins" editable="false" prefWidth="40.0" />
                     </children>
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
