@@ -40,8 +40,8 @@ public class AskQuestionController {
     private Label category;
     @FXML
     private TextArea questionTextArea;
-    @FXML
-    private TextField countDown;
+    //@FXML
+    //private TextField countDown;
     @FXML
     private ProgressBar timerProgress;
     @FXML
@@ -57,7 +57,7 @@ public class AskQuestionController {
         secondPlayerTokens.setText(Integer.toString(Main.playerB.getPlayerTurnFreeTokens()));
         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
         secondPlayerScore.setText(Integer.toString(Main.playerB.getPlayerScore()));
-        playerNameText.setText(Main.getCurrentTurnPlayer().getPlayerName() + ", Answer Now!");
+        playerNameText.setText(Main.getCurrentTurnPlayer().getPlayerName() + "...  Answer Now!");
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
 
         String choice = Main.wheel.getCurrentlySelectedWheelSector();
@@ -65,7 +65,7 @@ public class AskQuestionController {
         Question q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
         //questionTextArea.setFont();
         questionTextArea.setText(q.getQuestionText());
-        countDown.setText(Double.toString(seconds));
+        //countDown.setText(Double.toString(seconds));
         //timerProgress = new ProgressBar(1);
         timeProgressValue = (double)(TIME-seconds)/(double)TIME;
         //System.out.println("Time progress:" + timeProgressValue);
@@ -83,7 +83,7 @@ public class AskQuestionController {
 
             public void handle(ActionEvent event) {
                 seconds -= 0.005;
-                countDown.setText(Double.toString(seconds));
+                //countDown.setText(Double.toString(seconds));
                 timeProgressValue = (double)(TIME-seconds)/(double)TIME;
                 //System.out.println("Time progress:" + timeProgressValue);
                 timerProgress.setProgress(timeProgressValue);
