@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
+<BorderPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
     <top>
         <VBox spacing="10.0" BorderPane.alignment="CENTER">
             <children>
@@ -28,7 +28,7 @@
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
                         <Label text="Player A:" GridPane.halignment="RIGHT">
@@ -59,18 +59,18 @@
                         </Label>
                         <TextField fx:id="firstPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="secondPlayerTokens" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label text="Round Score:" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Round Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <padding>
-                        <Insets right="15.0" />
-                     </padding>
-                  </Label>
-                  <TextField fx:id="firstPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="secondPlayerScore" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="Round Score:" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="15.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Round Score:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <padding>
+                                <Insets right="15.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="firstPlayerScore" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="secondPlayerScore" editable="false" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                     </children>
                     <padding>
                         <Insets top="10.0" />
@@ -125,7 +125,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="remainingSpins" alignment="CENTER" prefWidth="40.0" />
+                <TextField fx:id="remainingSpins" alignment="CENTER" editable="false" prefWidth="40.0" />
             </children>
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

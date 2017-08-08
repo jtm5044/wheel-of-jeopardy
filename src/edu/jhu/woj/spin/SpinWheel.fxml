@@ -108,7 +108,7 @@
                     </VBox.margin>
                 </ImageView>
                 <Button fx:id="spinWheelButton" mnemonicParsing="false" onAction="#spinWheel" prefWidth="73.0" text="Spin" />
-                <Label fx:id="wheelOutcomeText" text="Wheel Outcome" />
+                <Label fx:id="wheelOutcomeText" />
                 <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
                     <children>
                         <Label text="Spins Remaining in Round:">
