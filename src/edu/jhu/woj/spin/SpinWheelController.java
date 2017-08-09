@@ -125,6 +125,7 @@ public class SpinWheelController {
         remainingSpins.setText(Integer.toString(Main.spinsCounter));
         currentTurnPlayerLabel.setText(Main.getCurrentTurnPlayer().getPlayerName() + "'s Turn...  Press Spin!");
         spinWheelButton.setDisable(false);
+
         String[] categories = Main.qb.getCategories(Main.currentRound);
         category1.setText(categories[0]);
         category2.setText(categories[1]);
@@ -257,8 +258,15 @@ public class SpinWheelController {
                         break;
                     default:
                         System.out.println("Jeopardy!, Category: " + choice);
-                        wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ...");
-                        showQuestion(choice);
+                        Question q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
+                        if (q != null) {
+                            wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ...");
+                            showQuestion(choice);
+                        }
+                        else {
+                            wheelOutcomeText.setText("CATEGORY: " + choice + " IS FULLY ANSWERED. SPIN AGAIN ...");
+                            spinWheelButton.setDisable(false);
+                        }
                         break;
                 }
             }
@@ -353,10 +361,17 @@ public class SpinWheelController {
 
     private void categoryButtonPressed(String choice)
     {
-        disableCategoryButtons(true);
-        wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... ");
-        Main.wheel.setCurrentlySelectedWheelSector(choice);
-        showQuestion(choice);
+        Question q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
+        if (q != null) {
+            disableCategoryButtons(true);
+            wheelOutcomeText.setText("CATEGORY: " + choice + ", GET READY ... ");
+            Main.wheel.setCurrentlySelectedWheelSector(choice);
+            showQuestion(choice);
+        }
+        else {
+            wheelOutcomeText.setText("CATEGORY: " + choice + " IS FULLY ANSWERED. SPIN AGAIN ...");
+            spinWheelButton.setDisable(false);
+        }
     }
 
     private void disableCategoryButtons(boolean disable)
