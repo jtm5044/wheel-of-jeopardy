@@ -36,6 +36,7 @@ public class Main extends Application {
     private static BufferedReader inFile;
     private static Player currentTurnPlayer;
     public static int currentRound = 1;
+    public static boolean timeExpired = false;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -203,4 +204,5 @@ public class Main extends Application {
         playerB = new Player(playerB.getPlayerName());
         currentTurnPlayer = playerA;
     }
+
 }

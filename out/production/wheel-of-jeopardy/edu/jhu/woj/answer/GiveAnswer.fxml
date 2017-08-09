@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
+<BorderPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.jhu.woj.answer.GiveAnswerController">
     <top>
         <VBox spacing="10.0" BorderPane.alignment="CENTER">
             <children>
@@ -86,14 +87,14 @@
     <center>
         <VBox alignment="BASELINE_CENTER" minHeight="-Infinity" prefHeight="275.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="Wheel Sector">
+                <Label fx:id="wheelSectorLabel" text="Wheel Sector">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
                 <Label fx:id="category" text="Category 3" />
                 <TextField fx:id="answer" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" />
-                <Label text="Did you answer correctly?">
+                <Label fx:id="correctAnswerPrompt" text="Did you answer correctly?">
                     <padding>
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
@@ -111,6 +112,7 @@
                         <Insets bottom="5.0" top="5.0" />
                     </padding>
                 </HBox>
+            <Button fx:id="goBackButton" onAction="#goBackPressed" mnemonicParsing="false" text="Go Back" />
             </children>
             <padding>
                 <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />

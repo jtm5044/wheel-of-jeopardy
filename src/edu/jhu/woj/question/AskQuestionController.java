@@ -90,6 +90,7 @@ public class AskQuestionController {
                 if (seconds <=0) {
                     time.stop();
                     try {
+                        Main.timeExpired = true;
                         Main.showAnswerScene();
                     } catch (IOException e) {
                         e.printStackTrace();

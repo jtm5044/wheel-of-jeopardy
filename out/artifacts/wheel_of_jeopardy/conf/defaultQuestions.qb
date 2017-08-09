@@ -250,7 +250,7 @@
 	"secondRoundCategories": {
 		"Money": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Which President is on the United States 1,000 dollar bill?",
@@ -258,7 +258,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What building is found on the back of a United States 100 dollar bill?",
@@ -266,7 +266,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What year was the two dollar bill last printed in the United States?",
@@ -274,7 +274,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What is the Spanish word for money?",
@@ -282,7 +282,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What is the official currency of the country Ecuador?",
@@ -291,7 +291,7 @@
 		],
         "Spain": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "The Spanish Civil War began in what year?",
@@ -299,7 +299,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "How do you say goodbye in Spanish?",
@@ -307,7 +307,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What is the word for \"Hello\" in Spanish?",
@@ -315,7 +315,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Who was the Spanish surrealist painter best known for his work \"The Persistence of Memory\"?",
@@ -323,7 +323,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Paella, a famous rice dish, originated in what country?",
@@ -332,7 +332,7 @@
 		],
         "Geek": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "\"Torchwood\" is an anagram and spin-off of what popular British sci-fi series?",
@@ -340,7 +340,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Star Trek: The Next Generation originally aired in what year?",
@@ -348,7 +348,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What is the unit of length that is approximately 3.26 light-years?",
@@ -356,7 +356,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Each of a classic Rubik's Cube six faces is covered by how many stickers?",
@@ -364,7 +364,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Bruce Willies played a convict turned time traveler in what 1995 movie?",
@@ -373,7 +373,7 @@
 		],
         "Disney": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Spaceship Earth is the icon for what amusement park that features technological innovation and international culture?",
@@ -381,7 +381,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "In the Disney movie \"Beauty and the Beast\", what is the name of Gaston's bumbling sidekick?",
@@ -389,7 +389,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What was the name of the kleptomaniac monkey in the Disney movie \"Aladdin\"?",
@@ -397,7 +397,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What are the names of the three fairies in the Disney classic \"Sleeping Beauty\"?",
@@ -405,7 +405,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What was the first ever series to air on the Disney Channel?",
@@ -414,7 +414,7 @@
 		],
         "Art": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "The ancient Greek statue Aphrodite of Milos, better known as Venus de Milo, is currently on display in what museum?",
@@ -422,7 +422,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "The Starry Night is an oil on canvas painted by which post-impressionist painter?",
@@ -430,7 +430,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Who painted a late 15th-century mural known as the Last Supper?",
@@ -438,7 +438,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Which artist is credited with developing linear perspective?",
@@ -446,7 +446,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What French sculptor created the Statue of Liberty?",
@@ -455,7 +455,7 @@
 		],
         "Music": [{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 200,
+				"dollarAmount": 400,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "Award winning Latina pop artist Shakira was born and raised in what country?",
@@ -463,7 +463,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 400,
+				"dollarAmount": 800,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "A Grammy is an award to recognize outstanding achievement in what industry?",
@@ -471,7 +471,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 600,
+				"dollarAmount": 1200,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "\"Stairway to Heaven\" a song by English rock band Led Zeppelin was originally released on which of their albums?",
@@ -479,7 +479,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 800,
+				"dollarAmount": 1600,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "What American punk rock band released their best selling album \"Dookie\" in 1994?",
@@ -487,7 +487,7 @@
 			},
 			{
 				"state": "QUESTION_STATE_UNANSWERED",
-				"dollarAmount": 1000,
+				"dollarAmount": 2000,
 				"dailyDouble": false,
 				"pathToMedia": "",
 				"questionText": "In music, the space between one musical pitch and another with double its frequency is called what?",
