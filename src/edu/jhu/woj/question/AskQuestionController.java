@@ -17,7 +17,7 @@ import javafx.util.Duration;
 
 public class AskQuestionController {
 
-    private final int TIME = 10;
+    private final int TIME = 15;
     private double seconds = TIME;
 
     @FXML
@@ -51,6 +51,7 @@ public class AskQuestionController {
 
     @FXML
     private void initialize() {
+        Main.playSound(Main.SOUND_INTRO);
         firstPlayer.setText(Main.playerA.getPlayerName());
         secondPlayer.setText(Main.playerB.getPlayerName());
         firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
@@ -91,6 +92,7 @@ public class AskQuestionController {
                     time.stop();
                     try {
                         Main.timeExpired = true;
+                        Main.stopSound();
                         Main.showAnswerScene();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -104,6 +106,7 @@ public class AskQuestionController {
 
     @FXML
     private void goGiveAnswer() throws IOException{
+        Main.stopSound();
         Main.playSound(Main.SOUND_BUTTON_CLICK);
         time.stop();
         Main.showAnswerScene();

@@ -38,7 +38,7 @@ public class Main extends Application {
 
 
     public final static int MAX_ROUNDS_PER_GAME = 2;
-    public final static int MAX_SPINS_PER_ROUND = 2;
+    public final static int MAX_SPINS_PER_ROUND = 50;
     public static int roundCounter = MAX_ROUNDS_PER_GAME;
     public static int spinsCounter = MAX_SPINS_PER_ROUND;
     public final static String DEFAULT_USR1 = "Player A";
