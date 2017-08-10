@@ -43,6 +43,7 @@ public class StartNewRoundController {
 
     @FXML
     private void goStartAgain() throws IOException{
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         System.out.println("roundCounter at StartNewRoundController: " + Main.roundCounter);
         Main.startNewRound();
         Main.showMainGameScene();

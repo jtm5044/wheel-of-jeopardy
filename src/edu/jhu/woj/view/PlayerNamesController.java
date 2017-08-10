@@ -30,6 +30,8 @@ public class PlayerNamesController {
     @FXML
     private void readUserNames() throws IOException{
 
+        Main.stopSound();
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         /*Set first and second user name Strings to the customized user
          * values entered. Otherwise, set to default values if user did
          * not customize user names*/
@@ -53,6 +55,8 @@ public class PlayerNamesController {
         }
 
         System.out.println(Main.playerA.getPlayerName() + "\t" + Main.playerB.getPlayerName());
+
+        Main.playSound(Main.SOUND_GAME_START);
         main.showMainGameScene();
     }
 

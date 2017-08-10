@@ -104,6 +104,7 @@ public class AskQuestionController {
 
     @FXML
     private void goGiveAnswer() throws IOException{
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         time.stop();
         Main.showAnswerScene();
     }

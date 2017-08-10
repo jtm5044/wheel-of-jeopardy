@@ -3,6 +3,7 @@ package edu.jhu.woj.spin;
 /**
  * Created by Graciela on 7/12/2017.
  */
+import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.Random;
@@ -15,9 +16,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 public class SpinWheelController {
+
+
 
     @FXML
     private TextField firstPlayer;
@@ -186,6 +191,8 @@ public class SpinWheelController {
     private void spinWheel() throws IOException {
         if (Main.roundCounter > 0) {
              if (Main.spinsCounter > 0) {
+                 Main.playSound(Main.SOUND_BUTTON_CLICK);
+                 Main.playSound(Main.SOUND_WHEEL_SPIN);
                 spinWheelButton.setDisable(true);
                 Random rand = new Random();
                 int randomSector = rand.nextInt(11) + 0;
@@ -197,6 +204,7 @@ public class SpinWheelController {
                 switch (choice) {
                     case Wheel.WHEEL_SECTOR_LOSE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_LOSE_TURN);
+                        Main.playSound(Main.SOUND_LOSE_A_TURN);
                         wheelOutcomeText.setText("SORRY, LOSE TURN!");
                         if(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() > 0) {
                             boolean useToken = showUseFreeTokenDialog();
@@ -219,6 +227,7 @@ public class SpinWheelController {
                         break;
                     case Wheel.WHEEL_SECTOR_FREE_TURN:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_FREE_TURN);
+                        Main.playSound(Main.SOUND_FREE_TOKEN);
                         wheelOutcomeText.setText("EARNED 1 FREE TURN TOKEN!, SPIN AGAIN!");
                         Main.getCurrentTurnPlayer().setPlayerTurnFreeTokens(Main.getCurrentTurnPlayer().getPlayerTurnFreeTokens() + 1);
                         firstPlayerTokens.setText(Integer.toString(Main.playerA.getPlayerTurnFreeTokens()));
@@ -227,6 +236,7 @@ public class SpinWheelController {
                         break;
                     case Wheel.WHEEL_SECTOR_BANKRUPT:
                         System.out.println("Do action for " + Wheel.WHEEL_SECTOR_BANKRUPT);
+                        Main.playSound(Main.SOUND_BANKRUPT);
                         wheelOutcomeText.setText("SORRY, BANKRUPT!");
                         Main.getCurrentTurnPlayer().goBankrupt();
                         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
@@ -301,6 +311,7 @@ public class SpinWheelController {
                         if (Main.roundCounter > 0) {
                             Main.showStartNewRound();
                         } else {
+                            Main.playSound(Main.SOUND_GAME_OVER);
                             Main.showGameIsOver();
                         }
                     } catch (IOException e) {
@@ -325,6 +336,7 @@ public class SpinWheelController {
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
 
         Optional<ButtonType> result = alert.showAndWait();
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         if (result.get() == buttonTypeYes){
             return true;
         } else {
@@ -361,6 +373,7 @@ public class SpinWheelController {
 
     private void categoryButtonPressed(String choice)
     {
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         Question q = Main.qb.getNextUnansweredQuestionForCategory(Main.currentRound, choice);
         if (q != null) {
             disableCategoryButtons(true);
@@ -413,4 +426,6 @@ public class SpinWheelController {
         time.playFromStart();
 
     }
+
+
 }

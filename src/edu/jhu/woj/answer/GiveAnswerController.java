@@ -85,6 +85,7 @@ public class GiveAnswerController {
 
     private void timeExpired()
     {
+        Main.playSound(Main.SOUND_TIMES_UP);
         Main.timeExpired = false;
 
         q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_INCORRECT);
@@ -117,6 +118,7 @@ public class GiveAnswerController {
 
     @FXML void goBackPressed()
     {
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         correctAnswerPrompt.setVisible(true);
         rightAnswer.setVisible(true);
         wrongAnswer.setVisible(true);
@@ -130,6 +132,8 @@ public class GiveAnswerController {
     }
 
     @FXML void recordRightAnswer() {
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
+        Main.playSound(Main.SOUND_CORRECT_ANSWER);
         System.out.println("You reported your answer is RIGHT");
         q.setState(Question.QuestionState.QUESTION_STATE_ANSWERED_CORRECT);
         Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() + q.getDollarAmount());
@@ -143,6 +147,8 @@ public class GiveAnswerController {
     }
 
     @FXML void recordWrongAnswer() {
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
+        Main.playSound(Main.SOUND_WRONG_ANSWER);
         System.out.println("You reported your answer is WRONG");
         Main.getCurrentTurnPlayer().setPlayerScore(Main.getCurrentTurnPlayer().getPlayerScore() - q.getDollarAmount());
         firstPlayerScore.setText(Integer.toString(Main.playerA.getPlayerScore()));
@@ -184,6 +190,7 @@ public class GiveAnswerController {
         alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCancel);
 
         Optional<ButtonType> result = alert.showAndWait();
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         if (result.get() == buttonTypeYes){
             return true;
         } else {

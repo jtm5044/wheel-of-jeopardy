@@ -17,11 +17,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
+    public static final String SOUNDBOARD_PATH = "soundboard" + System.getProperty("file.separator");
+    public static final String SOUND_LOSE_A_TURN = SOUNDBOARD_PATH  + "loseaturn.mp3";
+    public static final String SOUND_BANKRUPT = SOUNDBOARD_PATH  + "bankrupt.mp3";
+    public static final String SOUND_FREE_TOKEN = SOUNDBOARD_PATH  + "freetoken.mp3";
+    public static final String SOUND_BUTTON_CLICK = SOUNDBOARD_PATH  + "Buttonclicksound.mp3";
+    public static final String SOUND_WHEEL_SPIN = SOUNDBOARD_PATH  + "wheelspinquick.mp3";
+    public static final String SOUND_CORRECT_ANSWER = SOUNDBOARD_PATH  + "correctanswer.mp3";
+    public static final String SOUND_GAME_OVER = SOUNDBOARD_PATH  + "gameover1.mp3";
+    public static final String SOUND_GAME_START = SOUNDBOARD_PATH  + "gamestart.mp3";
+    public static final String SOUND_TIMES_UP = SOUNDBOARD_PATH  + "Timesup.mp3";
+    public static final String SOUND_INTRO = SOUNDBOARD_PATH  + "whiletypingnames.mp3";
+    public static final String SOUND_WRONG_ANSWER = SOUNDBOARD_PATH  + "wronganswer.mp3";
+
+
     public final static int MAX_ROUNDS_PER_GAME = 2;
-    public final static int MAX_SPINS_PER_ROUND = 50;
+    public final static int MAX_SPINS_PER_ROUND = 2;
     public static int roundCounter = MAX_ROUNDS_PER_GAME;
     public static int spinsCounter = MAX_SPINS_PER_ROUND;
     public final static String DEFAULT_USR1 = "Player A";
@@ -31,6 +48,7 @@ public class Main extends Application {
     public static QuestionBoard qb;
     public static Wheel wheel;
     private static boolean criticalError = false;
+    private static MediaPlayer mediaPlayer;
     private Stage primaryStage;
     private static BorderPane mainLayout;
     private static BufferedReader inFile;
@@ -57,6 +75,7 @@ public class Main extends Application {
     }
 
     private void showPlayerNamesView() throws IOException {
+        playSound(SOUND_INTRO);
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/PlayerNames.fxml"));
         BorderPane playerNames = loader.load();
@@ -64,6 +83,7 @@ public class Main extends Application {
     }
 
     public static void showMainGameScene() throws IOException{
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("spin/SpinWheel.fxml"));
         BorderPane wheelSpinner = loader.load();
@@ -203,6 +223,18 @@ public class Main extends Application {
         playerA = new Player(playerA.getPlayerName());
         playerB = new Player(playerB.getPlayerName());
         currentTurnPlayer = playerA;
+    }
+
+    public static void playSound(String musicFile)
+    {
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+
+    public static void stopSound()
+    {
+        mediaPlayer.stop();
     }
 
 }

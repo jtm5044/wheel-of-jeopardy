@@ -72,7 +72,9 @@ public class GameIsOverController {
 
     @FXML
     private void goStartNewGame() {
-
+        Main.stopSound();
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
+        Main.playSound(Main.SOUND_GAME_START);
         Main.startNewGame();
         try {
             Main.showMainGameScene();
@@ -83,6 +85,7 @@ public class GameIsOverController {
 
     @FXML
     private void goQuitGame() {
+        Main.playSound(Main.SOUND_BUTTON_CLICK);
         System.exit(0);
     }
 }

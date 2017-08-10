@@ -9,7 +9,7 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
     <jar href="lib/gson-2.8.1.jar" size="232620" download="eager" />
-    <jar href="wheel_of_jeopardy.jar" size="109749" download="eager" />
+    <jar href="wheel_of_jeopardy.jar" size="1694555" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="edu.jhu.woj.Main"  name="wheel-of-jeopardy" />
   <update check="background"/>
